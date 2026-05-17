@@ -1,0 +1,13 @@
+# Python / Marimo local state
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+.marimo/
+.cache/
+.DS_Store
+
+# Local notebook/runtime outputs
+.state/
+*.log
