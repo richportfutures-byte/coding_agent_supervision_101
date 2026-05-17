@@ -1,0 +1,62 @@
+- generic [ref=e2] [box=0,0,1200,866]:
+  - generic [ref=e10] [box=72,29,1041,2079]:
+    - generic [ref=e11] [box=72,29,1041,2035]:
+      - banner [ref=e15] [box=-7,43,1200,105]:
+        - heading "Coding Agent Supervision 101" [level=1] [ref=e16] [box=25,67,1136,34]
+        - generic [ref=e17] [box=25,105,1136,20]: Reference notebook for supervising coding agents
+      - navigation [ref=e24] [box=-7,177,1200,48]:
+        - generic [ref=e28] [box=25,178,651,40]:
+          - tablist [ref=e29] [box=25,178,651,40]
+          - tabpanel "Start Here" [box=25,225,651,0]
+      - generic [ref=e48] [box=86,254,1012,1796]:
+        - heading "Start Here" [level=2] [ref=e50] [box=86,254,1012,29]
+        - generic [ref=e52] [box=86,290,1012,25]: This page tells you what the app is for, the four ways to use it, and a concrete first session you can finish in thirty minutes.
+        - generic [ref=e59] [box=131,410,924,50]:
+          - strong [ref=e60] [box=131,413,59,19]: Core rule.
+          - text: A coding agent's summary is a
+          - emphasis [ref=e61] [box=381,413,33,19]: claim
+          - text: . Your job is to compare the claim against evidence — changed files, commands run, tests, runtime, and Git state — before trusting it.
+        - heading "What this course is for" [level=3] [ref=e63] [box=86,555,1012,29]
+        - generic [ref=e65] [box=86,591,1012,50]: You are supervising a coding agent in a real repository. You may not write production code yourself, but you decide when to trust the agent's report, when to challenge it, and what to ask next. This notebook is the reference and practice surface for that work.
+        - heading "Four ways to use this app" [level=3] [ref=e67] [box=86,648,1012,29]
+        - list [ref=e69] [box=86,684,1012,101]:
+          - listitem [ref=e70] [box=110,684,989,25]
+          - listitem [ref=e72] [box=110,709,989,25]
+          - listitem [ref=e74] [box=110,735,989,25]
+          - listitem [ref=e76] [box=110,760,989,25]
+        - heading "How to use the workbook" [level=3] [ref=e79] [box=86,792,1012,29]
+        - generic [ref=e81] [box=86,828,1012,25]: "For every drill, before you reveal the answer, work through these four questions in your head or on paper:"
+        - list [ref=e88] [box=131,948,924,101]:
+          - listitem [ref=e89] [box=154,948,900,25]
+          - listitem [ref=e91] [box=154,973,900,25]
+          - listitem [ref=e93] [box=154,998,900,25]
+          - listitem [ref=e95] [box=154,1024,900,25]
+        - heading "What to do after every coding-agent run" [level=3] [ref=e98] [box=86,1143,1012,29]
+        - generic [ref=e100] [box=86,1179,1012,50]:
+          - text: Open
+          - strong [ref=e101] [box=123,1182,135,19]: Real Agent Run Triage
+          - text: . Paste the agent's final summary, list the changed files, paste the commands run, and toggle the flags that match the run. The form classifies the result and suggests the next prompt.
+        - generic [ref=e107] [box=0,0,0,0]:
+          - strong [ref=e109] [box=131,1327,260,19]: Recommended path for first-time learners.
+          - list [ref=e110] [box=131,1367,924,126]
+        - heading "30-minute first session" [level=3] [ref=e123] [box=86,1588,1012,29]
+        - table [ref=e125] [box=86,1624,1012,146]:
+          - rowgroup [ref=e126] [box=86,1624,563,24]
+          - rowgroup [ref=e130] [box=86,1648,563,122]
+        - heading "7-day practice plan" [level=3] [ref=e144] [box=86,1777,1012,29]
+        - table [ref=e146] [box=86,1813,1012,237]:
+          - rowgroup [ref=e147] [box=86,1813,462,24]
+          - rowgroup [ref=e151] [box=86,1837,462,213]
+    - button [ref=e174] [cursor=pointer] [box=1155,14,31,25]:
+      - img [ref=e175] [box=1163,20,14,14]
+    - generic [ref=e180] [box=1453,202,300,283]:
+      - generic [ref=e181] [cursor=pointer] [box=1461,218,291,29]: Coding Agent Supervision 101
+      - generic [ref=e182] [cursor=pointer] [box=1472,246,280,29]: Start Here
+      - generic [ref=e183] [cursor=pointer] [box=1483,275,269,29]: What this course is for
+      - generic [ref=e184] [cursor=pointer] [box=1483,304,269,29]: Four ways to use this app
+      - generic [ref=e185] [cursor=pointer] [box=1483,333,269,29]: How to use the workbook
+      - generic [ref=e186] [cursor=pointer] [box=1483,361,269,50]: What to do after every coding-agent run
+      - generic [ref=e187] [cursor=pointer] [box=1483,412,269,29]: 30-minute first session
+      - generic [ref=e188] [cursor=pointer] [box=1483,441,269,29]: 7-day practice plan
+  - region "Notifications (F8)" [box=0,0,1200,0]:
+    - list [box=1171,837,29,29]

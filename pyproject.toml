@@ -11,5 +11,8 @@ dependencies = [
 [tool.marimo.runtime]
 auto_instantiate = true
 
+[tool.marimo.display]
+custom_css = ["custom.css"]
+
 [tool.ruff]
 line-length = 100

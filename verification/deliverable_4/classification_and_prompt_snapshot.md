@@ -1,0 +1,99 @@
+- generic [ref=e2] [box=0,0,1320,962]:
+  - generic [ref=e10] [box=86,-678,1132,1597]:
+    - generic [ref=e11] [box=86,-678,1132,1554]:
+      - banner [ref=e15] [box=-7,-664,1320,105]:
+        - heading "Coding Agent Supervision 101" [level=1] [ref=e16] [box=25,-640,1256,34]
+        - generic [ref=e17] [box=25,-602,1256,20]: Reference notebook for supervising coding agents
+      - navigation [ref=e22] [box=-7,-530,1320,48]:
+        - generic [ref=e26] [box=25,-529,651,40]:
+          - tablist [ref=e27] [box=25,-529,651,40]:
+            - tab "Start Here" [ref=e28] [cursor=pointer] [box=28,-526,85,32]:
+              - generic [ref=e30] [box=39,-522,63,25]: Start Here
+            - tab "Guided Learning Path" [ref=e31] [cursor=pointer] [box=113,-526,153,32]:
+              - generic [ref=e33] [box=123,-522,132,25]: Guided Learning Path
+            - tab "Workbook Practice" [ref=e34] [cursor=pointer] [box=266,-526,134,32]:
+              - generic [ref=e36] [box=277,-522,113,25]: Workbook Practice
+            - tab "Reference Desk" [ref=e37] [cursor=pointer] [box=400,-526,116,32]:
+              - generic [ref=e39] [box=411,-522,94,25]: Reference Desk
+            - tab "Real Agent Run Triage" [selected] [ref=e40] [cursor=pointer] [box=516,-526,156,32]:
+              - generic [ref=e42] [box=527,-522,135,25]: Real Agent Run Triage
+          - tabpanel "Real Agent Run Triage" [box=25,-482,651,0]
+      - generic [ref=e46] [box=101,-453,1103,1314]:
+        - heading "Real Agent Run Triage" [level=2] [ref=e48] [box=101,-453,1103,29]
+        - generic [ref=e50] [box=101,-417,1103,25]: Use this after every real agent run. Paste the agent's summary, list changed files, paste the commands run, then toggle the flags that match the run. The classification updates live.
+        - generic [ref=e53] [box=101,-385,1103,185]:
+          - generic [ref=e57] [box=101,-385,96,25]: Agent summary
+          - textbox "Paste the agent's final response." [ref=e59] [box=101,-359,1103,156]
+        - generic [ref=e62] [box=101,-192,1103,145]:
+          - generic [ref=e66] [box=101,-192,169,25]: Changed files (one per line)
+          - textbox "src/cockpit/manual_query.py tests/test_manual_query.py" [ref=e68] [box=101,-167,1103,116]:
+            - /placeholder: "src/cockpit/manual_query.py\ntests/test_manual_query.py"
+        - generic [ref=e71] [box=101,-40,1103,145]:
+          - generic [ref=e75] [box=101,-40,166,25]: Commands and test output
+          - textbox "uv run pytest -q tests/test_manual_query.py 7 passed" [ref=e77] [box=101,-15,1103,116]:
+            - /placeholder: "uv run pytest -q tests/test_manual_query.py\n7 passed"
+        - strong [ref=e80] [box=101,115,88,19]: What changed
+        - generic [ref=e81] [box=101,145,1103,25]:
+          - generic [ref=e84] [box=101,145,125,25]:
+            - generic [ref=e88] [box=121,145,98,25]: Source changed
+            - checkbox "Source changed" [checked] [ref=e89] [cursor=pointer] [box=101,150,14,14]:
+              - generic [box=102,150,12,14]:
+                - img [box=102,150,12,14]
+          - generic [ref=e92] [box=240,145,113,25]:
+            - generic [ref=e96] [box=259,145,87,25]: Tests changed
+            - checkbox "Tests changed" [checked] [ref=e97] [cursor=pointer] [box=240,150,14,14]:
+              - generic [box=241,150,12,14]:
+                - img [box=241,150,12,14]
+          - generic [ref=e100] [box=368,145,83,25]:
+            - generic [ref=e104] [box=387,145,56,25]: Test-only
+            - checkbox "Test-only" [ref=e105] [cursor=pointer] [box=368,150,14,14]
+        - generic [ref=e106] [box=101,177,1103,206]:
+          - generic [ref=e108] [box=101,177,1103,96]:
+            - generic [ref=e109] [box=118,194,1069,25]: Verification evidence
+            - generic [ref=e110] [box=118,230,1069,25]:
+              - generic [ref=e113] [box=118,230,242,25]:
+                - generic [ref=e117] [box=138,230,215,25]: App launched / workflow exercised
+                - checkbox "App launched / workflow exercised" [checked] [ref=e118] [cursor=pointer] [box=118,236,14,14]
+              - generic [ref=e121] [box=372,230,216,25]:
+                - generic [ref=e125] [box=391,230,189,25]: Live mode or live data claimed
+                - checkbox "Live mode or live data claimed" [ref=e126] [cursor=pointer] [box=372,236,14,14]
+              - generic [ref=e129] [box=600,230,106,25]:
+                - generic [ref=e133] [box=620,230,79,25]: Dry-run used
+                - checkbox "Dry-run used" [ref=e134] [cursor=pointer] [box=600,236,14,14]
+              - generic [ref=e137] [box=718,230,156,25]:
+                - generic [ref=e141] [box=738,230,129,25]: Fixture or mock used
+                - checkbox "Fixture or mock used" [ref=e142] [cursor=pointer] [box=718,236,14,14]
+          - generic [ref=e144] [box=101,287,1103,96]:
+            - generic [ref=e145] [box=118,304,1069,25]: Risk flags
+            - generic [ref=e146] [box=118,340,1069,25]:
+              - generic [ref=e149] [box=118,340,88,25]:
+                - generic [ref=e153] [box=138,340,61,25]: Docs-only
+                - checkbox "Docs-only" [ref=e154] [cursor=pointer] [box=118,346,14,14]
+              - generic [ref=e157] [box=218,340,91,25]:
+                - generic [ref=e161] [box=238,340,64,25]: Audit-only
+                - checkbox "Audit-only" [ref=e162] [cursor=pointer] [box=218,346,14,14]
+              - generic [ref=e165] [box=321,340,76,25]:
+                - generic [ref=e169] [box=341,340,49,25]: Blocked
+                - checkbox "Blocked" [ref=e170] [cursor=pointer] [box=321,346,14,14]
+              - generic [ref=e173] [box=409,340,135,25]:
+                - generic [ref=e177] [box=428,340,108,25]: Unsafe or unclear
+                - checkbox "Unsafe or unclear" [ref=e178] [cursor=pointer] [box=409,346,14,14]
+        - generic [ref=e184] [box=0,0,0,0]:
+          - 'heading "Classification: Implemented and verified" [level=3] [ref=e209] [box=145,477,1015,29]'
+          - generic [ref=e186] [box=145,520,1015,25]:
+            - strong [ref=e187] [box=145,523,48,19]: Reason.
+            - text: Source/config/script changes are present and a real runtime path was exercised (app launch or live).
+          - strong [ref=e189] [box=145,563,115,19]: Data-source notes.
+          - list [ref=e190] [box=145,603,1015,25]:
+            - listitem [ref=e191] [box=168,603,992,25]: "Data source unknown: ask whether proof was live, mock, fixture, dry-run, static, or unknown."
+        - iframe [ref=e210] [box=101,735,1103,126]:
+          - generic [ref=f3e2] [box=0,0,1103,92]:
+            - button "Copy" [ref=f3e3] [cursor=pointer] [box=1026,17,60,32]
+            - generic [ref=f3e4] [box=17,53,1069,22]: List exact changed runtime files, exact verification commands, what each command proved, and what was not verified.
+    - button [ref=e195] [cursor=pointer] [box=1275,14,31,25]:
+      - img [ref=e196] [box=1283,20,14,14]
+    - generic [ref=e201] [box=1573,226,300,88]:
+      - generic [ref=e202] [cursor=pointer] [box=1581,242,291,29]: Coding Agent Supervision 101
+      - generic [ref=e203] [cursor=pointer] [box=1592,270,280,29]: Real Agent Run Triage
+  - region "Notifications (F8)" [box=0,0,1320,0]:
+    - list [box=1291,933,29,29]

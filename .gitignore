@@ -5,8 +5,12 @@ __pycache__/
 .env
 .env.*
 .marimo/
+__marimo__/
 .cache/
 .DS_Store
+
+# Editor / agent local config
+.claude/
 
 # Local notebook/runtime outputs
 .state/

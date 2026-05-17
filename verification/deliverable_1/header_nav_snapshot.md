@@ -1,0 +1,101 @@
+- generic [ref=e2] [box=0,0,1320,962]:
+  - generic [ref=e10] [box=86,29,1132,2079]:
+    - generic [ref=e11] [box=86,29,1132,2035]:
+      - banner [ref=e15] [box=-7,43,1320,105]:
+        - heading "Coding Agent Supervision 101" [level=1] [ref=e16] [box=25,67,1256,34]
+        - generic [ref=e17] [box=25,105,1256,20]: Reference notebook for supervising coding agents
+      - navigation [ref=e22] [box=-7,177,1320,48]:
+        - generic [ref=e26] [box=25,178,651,40]:
+          - tablist [ref=e27] [box=25,178,651,40]:
+            - tab "Start Here" [selected] [ref=e28] [cursor=pointer] [box=28,181,85,32]
+            - tab "Guided Learning Path" [ref=e31] [cursor=pointer] [box=113,181,153,32]
+            - tab "Workbook Practice" [ref=e34] [cursor=pointer] [box=266,181,134,32]
+            - tab "Reference Desk" [ref=e37] [cursor=pointer] [box=400,181,116,32]
+            - tab "Real Agent Run Triage" [ref=e40] [cursor=pointer] [box=516,181,156,32]
+          - tabpanel "Start Here" [box=25,225,651,0]
+      - generic [ref=e46] [box=101,254,1103,1796]:
+        - heading "Start Here" [level=2] [ref=e772] [box=101,254,1103,29]
+        - generic [ref=e50] [box=101,290,1103,25]: This page tells you what the app is for, the four ways to use it, and a concrete first session you can finish in thirty minutes.
+        - generic [ref=e779] [box=145,410,1015,50]:
+          - strong [ref=e780] [box=145,413,59,19]: Core rule.
+          - text: A coding agent's summary is a
+          - emphasis [ref=e781] [box=395,413,33,19]: claim
+          - text: . Your job is to compare the claim against evidence — changed files, commands run, tests, runtime, and Git state — before trusting it.
+        - heading "What this course is for" [level=3] [ref=e782] [box=101,555,1103,29]
+        - generic [ref=e784] [box=101,591,1103,50]: You are supervising a coding agent in a real repository. You may not write production code yourself, but you decide when to trust the agent's report, when to challenge it, and what to ask next. This notebook is the reference and practice surface for that work.
+        - heading "Four ways to use this app" [level=3] [ref=e785] [box=101,648,1103,29]
+        - list [ref=e787] [box=101,684,1103,101]:
+          - listitem [ref=e788] [box=124,684,1080,25]:
+            - strong [ref=e789] [box=130,687,132,19]: Guided Learning Path
+            - text: — read the course one module at a time, with an objective, examples, and pointers to matching workbook drills.
+          - listitem [ref=e790] [box=124,709,1080,25]:
+            - strong [ref=e791] [box=130,712,113,19]: Workbook Practice
+            - text: — pick a drill, attempt the answer yourself, then reveal the intended interpretation, the common mistake, and the best follow-up prompt.
+          - listitem [ref=e792] [box=124,735,1080,25]:
+            - strong [ref=e793] [box=130,738,94,19]: Reference Desk
+            - text: — look up glossary terms, command anatomy, the quick reference, and cheat sheets without losing your place in the course.
+          - listitem [ref=e794] [box=124,760,1080,25]:
+            - strong [ref=e795] [box=130,763,135,19]: Real Agent Run Triage
+            - text: — after every real agent run, paste the summary and use the form to classify what was actually proven.
+        - heading "How to use the workbook" [level=3] [ref=e797] [box=101,792,1103,29]
+        - generic [ref=e799] [box=101,828,1103,25]: "For every drill, before you reveal the answer, work through these four questions in your head or on paper:"
+        - list [ref=e806] [box=145,948,1015,101]:
+          - listitem [ref=e807] [box=168,948,992,25]:
+            - strong [ref=e808] [box=174,951,145,19]: What is directly visible?
+            - text: (file paths, commands, output, exit codes)
+          - listitem [ref=e809] [box=168,973,992,25]:
+            - strong [ref=e810] [box=174,976,224,19]: What is a reasonable interpretation?
+            - text: (what this evidence probably means)
+          - listitem [ref=e811] [box=168,998,992,25]:
+            - strong [ref=e812] [box=174,1001,209,19]: What cannot be safely concluded?
+            - text: (the leap the agent might invite you to make)
+          - listitem [ref=e813] [box=168,1024,992,25]:
+            - strong [ref=e814] [box=174,1027,146,19]: What should I ask next?
+            - text: (the narrow prompt that reduces uncertainty)
+        - heading "What to do after every coding-agent run" [level=3] [ref=e816] [box=101,1143,1103,29]
+        - generic [ref=e818] [box=101,1179,1103,50]:
+          - text: Open
+          - strong [ref=e819] [box=137,1182,135,19]: Real Agent Run Triage
+          - text: . Paste the agent's final summary, list the changed files, paste the commands run, and toggle the flags that match the run. The form classifies the result and suggests the next prompt.
+        - generic [ref=e825] [box=0,0,0,0]:
+          - strong [ref=e827] [box=145,1327,260,19]: Recommended path for first-time learners.
+          - list [ref=e828] [box=145,1367,1015,126]:
+            - listitem [ref=e829] [box=168,1367,992,25]
+            - listitem [ref=e831] [box=168,1393,992,25]
+            - listitem [ref=e833] [box=168,1418,992,25]
+            - listitem [ref=e837] [box=168,1443,992,25]: Work the four questions, then reveal the answer.
+            - listitem [ref=e838] [box=168,1468,992,25]
+        - heading "30-minute first session" [level=3] [ref=e841] [box=101,1588,1103,29]
+        - table [ref=e843] [box=101,1624,1103,146]:
+          - rowgroup [ref=e844] [box=101,1624,563,24]:
+            - row "Minutes Do" [ref=e845] [box=101,1624,563,24]
+          - rowgroup [ref=e848] [box=101,1648,563,122]:
+            - row "0 – 5 Read this page in full." [ref=e849] [box=101,1648,563,31]
+            - row "5 – 15 Guided Learning Path → Module 1 → read objective, body, and \"what to ask next\"." [ref=e852] [box=101,1679,563,30]
+            - row "15 – 22 Workbook Practice → Command dissection → Drills 1.1 and 1.2. Reveal answers." [ref=e855] [box=101,1709,563,30]
+            - row "22 – 30 Real Agent Run Triage → paste a real (or recent) agent summary and read the classification." [ref=e858] [box=101,1739,563,30]
+        - heading "7-day practice plan" [level=3] [ref=e862] [box=101,1777,1103,29]
+        - table [ref=e864] [box=101,1813,1103,237]:
+          - rowgroup [ref=e865] [box=101,1813,462,24]:
+            - row "Day Focus" [ref=e866] [box=101,1813,462,24]
+          - rowgroup [ref=e869] [box=101,1837,462,213]:
+            - row "1 Module 1 + Drills 5.1, 5.2, 5.5." [ref=e870] [box=101,1837,462,31]
+            - row "2 Module 2 + Drills 1.1 – 1.4." [ref=e873] [box=101,1867,462,30]
+            - row "3 Module 3 + Drills 3.1 – 3.5." [ref=e876] [box=101,1898,462,30]
+            - row "4 Module 4 + Drills 2.1 – 2.8." [ref=e879] [box=101,1928,462,30]
+            - row "5 Module 5 + Drills 4.1 – 4.6." [ref=e882] [box=101,1959,462,30]
+            - row "6 Module 8 + Drills 5.1 – 5.10." [ref=e885] [box=101,1989,462,30]
+            - row "7 Module 9 + Drills 1.7, 4.7, 4.8, 5.7, 5.8. Run triage on three real agent sessions." [ref=e888] [box=101,2019,462,30]
+    - button [ref=e686] [cursor=pointer] [box=1275,14,31,25]:
+      - img [ref=e687] [box=1283,20,14,14]
+    - generic [ref=e692] [box=1573,226,300,283]:
+      - generic [ref=e693] [cursor=pointer] [box=1581,242,291,29]: Coding Agent Supervision 101
+      - generic [ref=e891] [cursor=pointer] [box=1592,270,280,29]: Start Here
+      - generic [ref=e892] [cursor=pointer] [box=1603,299,269,29]: What this course is for
+      - generic [ref=e893] [cursor=pointer] [box=1603,328,269,29]: Four ways to use this app
+      - generic [ref=e894] [cursor=pointer] [box=1603,357,269,29]: How to use the workbook
+      - generic [ref=e895] [cursor=pointer] [box=1603,385,269,50]: What to do after every coding-agent run
+      - generic [ref=e896] [cursor=pointer] [box=1603,436,269,29]: 30-minute first session
+      - generic [ref=e897] [cursor=pointer] [box=1603,465,269,29]: 7-day practice plan
+  - region "Notifications (F8)" [box=0,0,1320,0]:
+    - list [box=1291,933,29,29]

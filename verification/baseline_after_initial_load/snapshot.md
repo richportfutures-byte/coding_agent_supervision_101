@@ -1,0 +1,145 @@
+- generic [ref=e2] [box=0,0,1200,866]:
+  - generic [ref=e10] [box=72,29,1041,2110]:
+    - generic [ref=e11] [box=72,29,1041,2066]:
+      - banner [ref=e15] [box=-7,43,1012,105]:
+        - heading "Coding Agent Supervision 101" [level=1] [ref=e16] [box=25,67,948,34]
+        - generic [ref=e17] [box=25,105,948,20]: Reference notebook for supervising coding agents
+      - navigation [ref=e24] [box=-7,177,1200,79]:
+        - generic [ref=e27] [box=25,177,651,79]:
+          - generic [ref=e31] [box=25,177,95,25]: Course sections
+          - generic [ref=e32] [box=25,210,651,47]:
+            - tablist [ref=e33] [box=25,210,651,40]:
+              - tab "Start Here" [selected] [ref=e34] [cursor=pointer] [box=28,213,85,32]
+              - tab "Guided Learning Path" [ref=e37] [cursor=pointer] [box=113,213,153,32]
+              - tab "Workbook Practice" [ref=e40] [cursor=pointer] [box=266,213,134,32]
+              - tab "Reference Desk" [ref=e43] [cursor=pointer] [box=400,213,116,32]
+              - tab "Real Agent Run Triage" [ref=e46] [cursor=pointer] [box=516,213,156,32]
+            - tabpanel "Start Here" [box=25,256,651,0]
+      - generic [ref=e52] [box=86,285,1012,1796]:
+        - heading "Start Here" [level=2] [ref=e54] [box=86,285,1012,29]
+        - generic [ref=e56] [box=86,321,1012,25]: This page tells you what the app is for, the four ways to use it, and a concrete first session you can finish in thirty minutes.
+        - generic [ref=e63] [box=131,441,924,50]:
+          - strong [ref=e64] [box=131,444,59,19]: Core rule.
+          - text: A coding agent's summary is a
+          - emphasis [ref=e65] [box=381,444,33,19]: claim
+          - text: . Your job is to compare the claim against evidence — changed files, commands run, tests, runtime, and Git state — before trusting it.
+        - heading "What this course is for" [level=3] [ref=e67] [box=86,586,1012,29]
+        - generic [ref=e69] [box=86,622,1012,50]: You are supervising a coding agent in a real repository. You may not write production code yourself, but you decide when to trust the agent's report, when to challenge it, and what to ask next. This notebook is the reference and practice surface for that work.
+        - heading "Four ways to use this app" [level=3] [ref=e71] [box=86,679,1012,29]
+        - list [ref=e73] [box=86,715,1012,101]:
+          - listitem [ref=e74] [box=110,715,989,25]:
+            - strong [ref=e75] [box=115,718,132,19]: Guided Learning Path
+            - text: — read the course one module at a time, with an objective, examples, and pointers to matching workbook drills.
+          - listitem [ref=e76] [box=110,741,989,25]:
+            - strong [ref=e77] [box=115,744,113,19]: Workbook Practice
+            - text: — pick a drill, attempt the answer yourself, then reveal the intended interpretation, the common mistake, and the best follow-up prompt.
+          - listitem [ref=e78] [box=110,766,989,25]:
+            - strong [ref=e79] [box=115,769,94,19]: Reference Desk
+            - text: — look up glossary terms, command anatomy, the quick reference, and cheat sheets without losing your place in the course.
+          - listitem [ref=e80] [box=110,791,989,25]:
+            - strong [ref=e81] [box=115,794,135,19]: Real Agent Run Triage
+            - text: — after every real agent run, paste the summary and use the form to classify what was actually proven.
+        - heading "How to use the workbook" [level=3] [ref=e83] [box=86,823,1012,29]
+        - generic [ref=e85] [box=86,859,1012,25]: "For every drill, before you reveal the answer, work through these four questions in your head or on paper:"
+        - list [ref=e92] [box=131,979,924,101]:
+          - listitem [ref=e93] [box=154,979,900,25]:
+            - strong [ref=e94] [box=159,982,145,19]: What is directly visible?
+            - text: (file paths, commands, output, exit codes)
+          - listitem [ref=e95] [box=154,1004,900,25]:
+            - strong [ref=e96] [box=159,1007,224,19]: What is a reasonable interpretation?
+            - text: (what this evidence probably means)
+          - listitem [ref=e97] [box=154,1030,900,25]:
+            - strong [ref=e98] [box=159,1033,209,19]: What cannot be safely concluded?
+            - text: (the leap the agent might invite you to make)
+          - listitem [ref=e99] [box=154,1055,900,25]:
+            - strong [ref=e100] [box=159,1058,146,19]: What should I ask next?
+            - text: (the narrow prompt that reduces uncertainty)
+        - heading "What to do after every coding-agent run" [level=3] [ref=e102] [box=86,1174,1012,29]
+        - generic [ref=e104] [box=86,1210,1012,50]:
+          - text: Open
+          - strong [ref=e105] [box=123,1213,135,19]: Real Agent Run Triage
+          - text: . Paste the agent's final summary, list the changed files, paste the commands run, and toggle the flags that match the run. The form classifies the result and suggests the next prompt.
+        - generic [ref=e111] [box=0,0,0,0]:
+          - strong [ref=e113] [box=131,1358,260,19]: Recommended path for first-time learners.
+          - list [ref=e114] [box=131,1399,924,126]:
+            - listitem [ref=e115] [box=154,1399,900,25]:
+              - text: Read this
+              - emphasis [ref=e116] [box=220,1402,63,19]: Start Here
+              - text: page.
+            - listitem [ref=e117] [box=154,1424,900,25]:
+              - text: Open
+              - strong [ref=e118] [box=196,1427,132,19]: Guided Learning Path
+              - text: and read Module 1.
+            - listitem [ref=e119] [box=154,1449,900,25]:
+              - text: Open
+              - strong [ref=e120] [box=196,1452,113,19]: Workbook Practice
+              - text: ","
+              - emphasis [ref=e121] [box=315,1452,127,19]: Command dissection
+              - text: ","
+              - strong [ref=e122] [box=449,1452,50,19]: Drill 1.1
+              - text: .
+            - listitem [ref=e123] [box=154,1474,900,25]: Work the four questions, then reveal the answer.
+            - listitem [ref=e124] [box=154,1499,900,25]:
+              - text: Open
+              - strong [ref=e125] [box=196,1502,135,19]: Real Agent Run Triage
+              - text: with a real agent summary you have on hand.
+        - heading "30-minute first session" [level=3] [ref=e127] [box=86,1619,1012,29]
+        - table [ref=e129] [box=86,1655,1012,146]:
+          - rowgroup [ref=e130] [box=86,1655,563,24]:
+            - row "Minutes Do" [ref=e131] [box=86,1655,563,24]:
+              - columnheader "Minutes" [ref=e132] [box=86,1655,58,24]
+              - columnheader "Do" [ref=e133] [box=144,1655,505,24]
+          - rowgroup [ref=e134] [box=86,1679,563,122]:
+            - row "0 – 5 Read this page in full." [ref=e135] [box=86,1679,563,31]:
+              - cell "0 – 5" [ref=e136] [box=86,1679,58,31]
+              - cell "Read this page in full." [ref=e137] [box=144,1679,505,31]
+            - row "5 – 15 Guided Learning Path → Module 1 → read objective, body, and \"what to ask next\"." [ref=e138] [box=86,1710,563,30]:
+              - cell "5 – 15" [ref=e139] [box=86,1710,58,30]
+              - cell "Guided Learning Path → Module 1 → read objective, body, and \"what to ask next\"." [ref=e140] [box=144,1710,505,30]
+            - row "15 – 22 Workbook Practice → Command dissection → Drills 1.1 and 1.2. Reveal answers." [ref=e141] [box=86,1740,563,30]:
+              - cell "15 – 22" [ref=e142] [box=86,1740,58,30]
+              - cell "Workbook Practice → Command dissection → Drills 1.1 and 1.2. Reveal answers." [ref=e143] [box=144,1740,505,30]
+            - row "22 – 30 Real Agent Run Triage → paste a real (or recent) agent summary and read the classification." [ref=e144] [box=86,1771,563,30]:
+              - cell "22 – 30" [ref=e145] [box=86,1771,58,30]
+              - cell "Real Agent Run Triage → paste a real (or recent) agent summary and read the classification." [ref=e146] [box=144,1771,505,30]
+        - heading "7-day practice plan" [level=3] [ref=e148] [box=86,1808,1012,29]
+        - table [ref=e150] [box=86,1844,1012,237]:
+          - rowgroup [ref=e151] [box=86,1844,462,24]:
+            - row "Day Focus" [ref=e152] [box=86,1844,462,24]:
+              - columnheader "Day" [ref=e153] [box=86,1844,35,24]
+              - columnheader "Focus" [ref=e154] [box=121,1844,427,24]
+          - rowgroup [ref=e155] [box=86,1868,462,213]:
+            - row "1 Module 1 + Drills 5.1, 5.2, 5.5." [ref=e156] [box=86,1868,462,31]:
+              - cell "1" [ref=e157] [box=86,1868,35,31]
+              - cell "Module 1 + Drills 5.1, 5.2, 5.5." [ref=e158] [box=121,1868,427,31]
+            - row "2 Module 2 + Drills 1.1 – 1.4." [ref=e159] [box=86,1899,462,30]:
+              - cell "2" [ref=e160] [box=86,1899,35,30]
+              - cell "Module 2 + Drills 1.1 – 1.4." [ref=e161] [box=121,1899,427,30]
+            - row "3 Module 3 + Drills 3.1 – 3.5." [ref=e162] [box=86,1929,462,30]:
+              - cell "3" [ref=e163] [box=86,1929,35,30]
+              - cell "Module 3 + Drills 3.1 – 3.5." [ref=e164] [box=121,1929,427,30]
+            - row "4 Module 4 + Drills 2.1 – 2.8." [ref=e165] [box=86,1959,462,30]:
+              - cell "4" [ref=e166] [box=86,1959,35,30]
+              - cell "Module 4 + Drills 2.1 – 2.8." [ref=e167] [box=121,1959,427,30]
+            - row "5 Module 5 + Drills 4.1 – 4.6." [ref=e168] [box=86,1990,462,30]:
+              - cell "5" [ref=e169] [box=86,1990,35,30]
+              - cell "Module 5 + Drills 4.1 – 4.6." [ref=e170] [box=121,1990,427,30]
+            - row "6 Module 8 + Drills 5.1 – 5.10." [ref=e171] [box=86,2020,462,30]:
+              - cell "6" [ref=e172] [box=86,2020,35,30]
+              - cell "Module 8 + Drills 5.1 – 5.10." [ref=e173] [box=121,2020,427,30]
+            - row "7 Module 9 + Drills 1.7, 4.7, 4.8, 5.7, 5.8. Run triage on three real agent sessions." [ref=e174] [box=86,2051,462,30]:
+              - cell "7" [ref=e175] [box=86,2051,35,30]
+              - cell "Module 9 + Drills 1.7, 4.7, 4.8, 5.7, 5.8. Run triage on three real agent sessions." [ref=e176] [box=121,2051,427,30]
+    - button [ref=e178] [cursor=pointer] [box=1155,14,31,25]:
+      - img [ref=e179] [box=1163,20,14,14]
+    - generic [ref=e184] [box=1453,202,300,283]:
+      - generic [ref=e185] [cursor=pointer] [box=1461,218,291,29]: Coding Agent Supervision 101
+      - generic [ref=e186] [cursor=pointer] [box=1472,246,280,29]: Start Here
+      - generic [ref=e187] [cursor=pointer] [box=1483,275,269,29]: What this course is for
+      - generic [ref=e188] [cursor=pointer] [box=1483,304,269,29]: Four ways to use this app
+      - generic [ref=e189] [cursor=pointer] [box=1483,333,269,29]: How to use the workbook
+      - generic [ref=e190] [cursor=pointer] [box=1483,361,269,50]: What to do after every coding-agent run
+      - generic [ref=e191] [cursor=pointer] [box=1483,412,269,29]: 30-minute first session
+      - generic [ref=e192] [cursor=pointer] [box=1483,441,269,29]: 7-day practice plan
+  - region "Notifications (F8)" [box=0,0,1200,0]:
+    - list [box=1171,837,29,29]
