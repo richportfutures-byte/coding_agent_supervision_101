@@ -211,13 +211,14 @@ def _():
 
 @app.cell
 def _(mo):
-    header = mo.md(
+    header = mo.Html(
         """
-        # Coding Agent Supervision 101
-
-        A guided notebook for non-developers supervising coding agents in real repositories.
-        New here? Start in **Start Here**. Then move to **Guided Learning Path**, **Workbook Practice**,
-        **Reference Desk**, and **Real Agent Run Triage**.
+        <header class="course-header">
+          <h1 class="course-header__title">Coding Agent Supervision 101</h1>
+          <div class="course-header__subtitle">
+            Reference notebook for supervising coding agents
+          </div>
+        </header>
         """
     )
     header
@@ -226,18 +227,19 @@ def _(mo):
 
 @app.cell
 def _(mo):
-    mode = mo.ui.dropdown(
-        options=[
-            "Start Here",
-            "Guided Learning Path",
-            "Workbook Practice",
-            "Reference Desk",
-            "Real Agent Run Triage",
-        ],
+    _section_options = [
+        "Start Here",
+        "Guided Learning Path",
+        "Workbook Practice",
+        "Reference Desk",
+        "Real Agent Run Triage",
+    ]
+    mode = mo.ui.tabs(
+        {_label: "" for _label in _section_options},
         value="Start Here",
-        label="Mode",
+        label="",
     )
-    mode
+    mo.md(f'<nav class="course-nav">{mode}</nav>')
     return (mode,)
 
 
@@ -1073,6 +1075,19 @@ def _(
         ]
         _sub = reference_sub.value
         if _sub == "Glossary":
+            import html as _html
+
+            CATEGORY_COLOR = {
+                "Terminal and shell": "teal",
+                "Files and paths": "blue",
+                "Git": "orange",
+                "Repo structure": "blue",
+                "Tests": "gold",
+                "App runtime": "teal",
+                "Coding agents": "purple",
+                "Live data and safety": "orange",
+                "Orchestration prompts": "gold",
+            }
             _query = (glossary_search.value or "").lower().strip()
             _filtered = []
             for _row in glossary_rows:
@@ -1081,21 +1096,26 @@ def _(
                 if _query and _query not in " ".join(_row.values()).lower():
                     continue
                 _filtered.append(_row)
-            _table = mo.ui.table(
-                data=[
-                    {
-                        "Term": _r["term"],
-                        "Category": _r["category"],
-                        "Definition": _r["definition"],
-                        "Why you see it": _r["why_seen"],
-                        "What to ask": _r["ask"],
-                    }
-                    for _r in _filtered
-                ],
-                selection=None,
-                pagination=True,
-                page_size=25,
-                wrapped_columns=["Definition", "Why you see it", "What to ask"],
+            _cards = []
+            for _r in _filtered:
+                _color = CATEGORY_COLOR.get(_r["category"], "teal")
+                _cards.append(
+                    f"""
+                    <article class="glossary-card glossary-card--{_color}">
+                      <h3 class="glossary-card__term">{_html.escape(_r["term"])}</h3>
+                      <div class="glossary-card__category">{_html.escape(_r["category"])}</div>
+                      <div class="glossary-card__body">{_html.escape(_r["definition"])}</div>
+                      <div class="glossary-card__meta">
+                        <strong>Why you see it:</strong> {_html.escape(_r["why_seen"])}
+                      </div>
+                      <div class="glossary-card__meta">
+                        <strong>What to ask:</strong> {_html.escape(_r["ask"])}
+                      </div>
+                    </article>
+                    """
+                )
+            _glossary_cards = mo.Html(
+                '<div class="glossary-vstack">' + "\n".join(_cards[:75]) + "</div>"
             )
             _items.extend(
                 [
@@ -1107,7 +1127,7 @@ def _(
                         gap=1.0,
                     ),
                     mo.md(f"**{len(_filtered)}** entries shown."),
-                    _table,
+                    _glossary_cards,
                 ]
             )
         elif _sub == "Command anatomy":
@@ -1162,7 +1182,150 @@ def _(
             bool(unsafe.value),
         )
         _notes_md = "\n".join(f"- {_n}" for _n in _notes)
-        _kind = classification_kind(_label)
+        LABEL_KIND = {
+            "Implemented and verified": "success",
+            "Implemented but not runtime-verified": "warn",
+            "Implemented but not verified": "warn",
+            "Test-only": "info",
+            "Needs follow-up": "info",
+            "Blocked": "danger",
+            "Unsafe or unclear": "danger",
+        }
+        _kind = LABEL_KIND.get(_label, "info")
+        import html as _html
+        import json as _json
+
+        _prompt_html = _html.escape(_prompt)
+        _prompt_js = _json.dumps(_prompt).replace("</", "<\\/")
+        _prompt_srcdoc = f"""
+        <!doctype html>
+        <html>
+          <head>
+            <style>
+              :root {{
+                --panel-dark: #1c1b19;
+                --accent-teal: #01696f;
+                --text-primary-dark: #ffffff;
+                --text-secondary: #797876;
+                --text-code: #e6e5e2;
+                --border-subtle: oklch(1 0 0 / 0.08);
+                --radius-card: 8px;
+                --radius-button: 6px;
+                --font-body: "Satoshi", system-ui, sans-serif;
+                --font-mono: ui-monospace, "JetBrains Mono", "Menlo", monospace;
+                --text-sm: 14px;
+              }}
+              html,
+              body {{
+                background: transparent;
+                margin: 0;
+              }}
+              :focus-visible {{
+                outline: 2px solid var(--accent-teal);
+                outline-offset: 2px;
+              }}
+              .next-prompt-card {{
+                background: var(--panel-dark);
+                border: 1px solid var(--border-subtle);
+                border-radius: var(--radius-card);
+                box-sizing: border-box;
+                min-height: 92px;
+                padding: 16px;
+                position: relative;
+              }}
+              .next-prompt-card__copy {{
+                background: transparent;
+                border: 1px solid var(--border-subtle);
+                border-radius: var(--radius-button);
+                color: var(--text-secondary);
+                cursor: pointer;
+                font-family: var(--font-body);
+                font-size: var(--text-sm);
+                font-weight: 500;
+                line-height: 1.3;
+                padding: 6px 12px;
+                position: absolute;
+                right: 16px;
+                top: 16px;
+                transition: color 120ms ease, border-color 120ms ease;
+              }}
+              .next-prompt-card__copy:hover {{
+                border-color: var(--accent-teal);
+                color: var(--text-primary-dark);
+              }}
+              .next-prompt-card__text {{
+                color: var(--text-code);
+                font-family: var(--font-mono);
+                font-size: var(--text-sm);
+                line-height: 1.55;
+                margin: 36px 0 0;
+                white-space: pre-wrap;
+              }}
+            </style>
+          </head>
+          <body>
+            <section class="next-prompt-card">
+              <button class="next-prompt-card__copy" type="button">Copy</button>
+              <pre class="next-prompt-card__text">{_prompt_html}</pre>
+            </section>
+            <script>
+              const btn = document.querySelector('.next-prompt-card__copy');
+              const promptText = {_prompt_js};
+              btn.addEventListener('click', async () => {{
+                try {{
+                  await navigator.clipboard.writeText(promptText);
+                }} catch (e) {{
+                  const ta = document.createElement('textarea');
+                  ta.value = promptText;
+                  document.body.appendChild(ta);
+                  ta.select();
+                  document.execCommand('copy');
+                  document.body.removeChild(ta);
+                }}
+                btn.textContent = 'Copied';
+                setTimeout(() => btn.textContent = 'Copy', 1200);
+              }});
+            </script>
+          </body>
+        </html>
+        """
+        _prompt_srcdoc_attr = _html.escape(_prompt_srcdoc, quote=True)
+        _next_prompt_card = mo.Html(
+            f"""
+            <iframe
+              class="next-prompt-frame"
+              title="Next prompt"
+              allow="clipboard-write"
+              srcdoc="{_prompt_srcdoc_attr}"
+            ></iframe>
+            """
+        )
+        _verification_panel = mo.md(
+            f"""
+            <section class="triage-panel">
+              <div class="triage-panel__label">Verification evidence</div>
+              <div class="triage-panel__row">
+                {app_launched}
+                {live}
+                {dry_run}
+                {fixture}
+              </div>
+            </section>
+            """
+        )
+        _risk_panel = mo.md(
+            f"""
+            <section class="triage-panel">
+              <div class="triage-panel__label">Risk flags</div>
+              <div class="triage-panel__row">
+                {docs_only}
+                {audit_only}
+                {blocked}
+                {unsafe}
+              </div>
+            </section>
+            """
+        )
         main_panel = mo.vstack(
             [
                 mo.md("## Real Agent Run Triage"),
@@ -1176,34 +1339,21 @@ def _(
                 commands,
                 mo.md("**What changed**"),
                 mo.hstack(
-                    [source_changed, tests_changed, docs_only, test_only, audit_only],
+                    [source_changed, tests_changed, test_only],
                     justify="start",
                     gap=1.0,
                     wrap=True,
                 ),
-                mo.md("**How it was verified**"),
-                mo.hstack(
-                    [app_launched, dry_run, fixture, live],
-                    justify="start",
-                    gap=1.0,
-                    wrap=True,
-                ),
-                mo.md("**State**"),
-                mo.hstack(
-                    [blocked, unsafe],
-                    justify="start",
-                    gap=1.0,
-                    wrap=True,
-                ),
+                mo.vstack([_verification_panel, _risk_panel], gap=1.0),
                 mo.callout(
                     mo.md(
                         f"### Classification: {_label}\n\n"
                         f"**Reason.** {_reason}\n\n"
-                        f"**Data-source notes.**\n{_notes_md}\n\n"
-                        f"**Suggested next prompt.**\n\n```text\n{_prompt}\n```"
+                        f"**Data-source notes.**\n{_notes_md}"
                     ),
                     kind=_kind,
                 ),
+                _next_prompt_card,
             ]
         )
 

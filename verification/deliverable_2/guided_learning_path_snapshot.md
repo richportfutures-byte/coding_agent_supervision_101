@@ -1,0 +1,86 @@
+- generic [ref=e2] [box=0,0,1320,962]:
+  - generic [ref=e10] [box=86,29,1132,1990]:
+    - generic [ref=e11] [box=86,29,1132,1947]:
+      - banner [ref=e15] [box=-7,43,1320,105]:
+        - heading "Coding Agent Supervision 101" [level=1] [ref=e16] [box=25,67,1256,34]
+        - generic [ref=e17] [box=25,105,1256,20]: Reference notebook for supervising coding agents
+      - navigation [ref=e22] [box=-7,177,1320,48]:
+        - generic [ref=e26] [box=25,165,651,72]:
+          - tablist [ref=e27] [box=25,165,651,40]:
+            - tab "Start Here" [ref=e28] [cursor=pointer] [box=28,169,85,32]
+            - tab "Guided Learning Path" [selected] [ref=e31] [cursor=pointer] [box=113,169,153,32]
+            - tab "Workbook Practice" [ref=e34] [cursor=pointer] [box=266,169,134,32]
+            - tab "Reference Desk" [ref=e37] [cursor=pointer] [box=400,169,116,32]
+            - tab "Real Agent Run Triage" [ref=e40] [cursor=pointer] [box=516,169,156,32]
+          - tabpanel "Guided Learning Path" [ref=e43] [box=25,212,651,25]:
+            - generic [ref=e46] [box=25,212,651,25]: Guided Learning Path
+      - generic [ref=e50] [box=101,254,1103,1707]:
+        - heading "Guided Learning Path" [level=2] [ref=e52] [box=101,254,1103,29]
+        - generic [ref=e54] [box=101,290,1103,50]: Read the course one module at a time. Each module has an objective, the body content, what you should understand before moving on, what to ask the coding agent next, and which workbook drills to practice.
+        - generic [ref=e57] [box=101,348,321,25]:
+          - generic [ref=e61] [box=101,348,46,25]: Module
+          - combobox "Module" [ref=e62] [cursor=pointer] [box=152,348,262,22]:
+            - option "What a coding agent is actually doing" [selected] [box=0,0,0,0]
+            - option "Terminal and shell basics" [box=0,0,0,0]
+            - option "Files, paths, and repo structure" [box=0,0,0,0]
+            - option "Git fundamentals" [box=0,0,0,0]
+            - option "Tests and verification" [box=0,0,0,0]
+            - option "Runtime and launch concepts" [box=0,0,0,0]
+            - option "Reading coding-agent prompts" [box=0,0,0,0]
+            - option "Reading coding-agent output" [box=0,0,0,0]
+            - option "Live data and safety" [box=0,0,0,0]
+            - option "Supervising the build loop" [box=0,0,0,0]
+        - generic [ref=e69] [box=145,467,1015,25]:
+          - strong [ref=e70] [box=145,470,61,19]: Objective.
+          - text: Separate facts, interpretations, and unverified claims in every agent response before trusting it.
+        - heading "Module content" [level=3] [ref=e72] [box=101,587,1103,29]
+        - generic [ref=e73] [box=0,0,0,0]:
+          - 'heading "Module 1: What a coding agent is actually doing" [level=2] [ref=e74] [box=101,623,1103,29]'
+          - generic [ref=e75] [box=101,695,1103,50]: A coding agent may inspect files, edit files, run commands, run tests, read errors, create commits, report results, get blocked, or overclaim confidence. Your job is to determine whether it changed the right thing and verified the right thing.
+          - heading "Example" [level=3] [ref=e76] [box=101,796,1103,29]
+          - generic [ref=e77] [box=101,843,1103,81]:
+            - code [ref=e80] [box=115,875,605,15]: I inspected the launch script, updated the cockpit renderer, and 6 tests passed.
+            - button "Copy to clipboard" [ref=e82] [cursor=pointer] [box=1173,850,24,24]
+          - generic [ref=e86] [box=101,945,1103,25]:
+            - strong [ref=e87] [box=101,948,30,19]: "Fact:"
+            - text: The agent claims inspection, a renderer change, and tests.
+          - generic [ref=e88] [box=101,1006,1103,25]:
+            - strong [ref=e89] [box=101,1009,90,19]: "Interpretation:"
+            - text: This may be implementation if the renderer is on the active app path.
+          - generic [ref=e90] [box=101,1067,1103,25]:
+            - strong [ref=e91] [box=101,1070,90,19]: "What to verify:"
+            - text: Which files changed? Which tests ran? Did the app launch? Was the data live, mock, fixture, or unknown?
+          - heading "Beginner misunderstanding" [level=3] [ref=e92] [box=101,1143,1103,29]
+          - generic [ref=e93] [box=101,1204,1103,25]: “The agent said it fixed it, so it is fixed.” Not enough. The summary is a claim. Evidence is changed files, relevant tests, runtime proof, and explicit limits.
+        - heading "What you should understand before moving on" [level=3] [ref=e95] [box=101,1236,1103,29]
+        - list [ref=e97] [box=101,1272,1103,76]:
+          - listitem [ref=e98] [box=124,1272,1080,25]: Activity (files read, commands run) is not the same as progress.
+          - listitem [ref=e99] [box=124,1297,1080,25]: Every claim should be paired with concrete, file-and-command evidence.
+          - listitem [ref=e100] [box=124,1323,1080,25]: A summary is a claim. Evidence is changed files, relevant tests, runtime proof, and explicit limits.
+        - generic [ref=e106] [box=0,0,0,0]:
+          - strong [ref=e108] [box=145,1445,214,19]: What to ask the coding agent next.
+          - generic [ref=e109] [box=145,1489,1015,37]:
+            - code [ref=e112] [box=159,1500,862,15]: Separate facts, interpretations, and unverified claims. Then list the smallest next step that reduces uncertainty.
+            - button "Copy to clipboard" [ref=e114] [cursor=pointer] [box=1129,1496,24,24]
+        - heading "Related workbook drills" [level=3] [ref=e119] [box=101,1643,1103,29]
+        - list [ref=e121] [box=101,1679,1103,76]:
+          - listitem [ref=e122] [box=124,1679,1080,25]: Drill 5.1 - Strong implementation summary
+          - listitem [ref=e123] [box=124,1704,1080,25]: Drill 5.2 - Weak generic summary
+          - listitem [ref=e124] [box=124,1729,1080,25]: Drill 5.5 - Audit-only result when implementation was requested
+        - generic [ref=e131] [box=145,1849,1015,25]:
+          - text: Open
+          - strong [ref=e132] [box=182,1852,113,19]: Workbook Practice
+          - text: ", pick the matching category, and find these drills by ID."
+    - button [ref=e134] [cursor=pointer] [box=1275,14,31,25]:
+      - img [ref=e135] [box=1283,20,14,14]
+    - generic [ref=e140] [box=1573,226,300,304]:
+      - generic [ref=e141] [cursor=pointer] [box=1581,242,291,29]: Coding Agent Supervision 101
+      - generic [ref=e142] [cursor=pointer] [box=1592,270,280,29]: Guided Learning Path
+      - generic [ref=e143] [cursor=pointer] [box=1603,299,269,29]: Module content
+      - generic [ref=e144] [cursor=pointer] [box=1592,328,280,50]: "Module 1: What a coding agent is actually doing"
+      - generic [ref=e145] [cursor=pointer] [box=1603,378,269,29]: Example
+      - generic [ref=e146] [cursor=pointer] [box=1603,407,269,29]: Beginner misunderstanding
+      - generic [ref=e147] [cursor=pointer] [box=1603,436,269,50]: What you should understand before moving on
+      - generic [ref=e148] [cursor=pointer] [box=1603,486,269,29]: Related workbook drills
+  - region "Notifications (F8)" [box=0,0,1320,0]:
+    - list [box=1291,933,29,29]

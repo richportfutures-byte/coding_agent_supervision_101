@@ -1,0 +1,887 @@
+- generic [ref=e2] [box=0,0,1320,962]:
+  - generic [ref=e10] [box=86,-5238,1132,15456]:
+    - generic [ref=e11] [box=86,-5238,1132,15413]:
+      - banner [ref=e15] [box=-7,-5224,1320,105]:
+        - heading "Coding Agent Supervision 101" [level=1] [ref=e16] [box=25,-5200,1256,34]
+        - generic [ref=e17] [box=25,-5162,1256,20]: Reference notebook for supervising coding agents
+      - navigation [ref=e22] [box=-7,-5090,1320,48]:
+        - generic [ref=e26] [box=25,-5102,651,72]:
+          - tablist [ref=e27] [box=25,-5102,651,40]:
+            - tab "Start Here" [ref=e28] [cursor=pointer] [box=28,-5098,85,32]:
+              - generic [ref=e30] [box=39,-5095,63,25]: Start Here
+            - tab "Guided Learning Path" [ref=e31] [cursor=pointer] [box=113,-5098,153,32]:
+              - generic [ref=e33] [box=123,-5095,132,25]: Guided Learning Path
+            - tab "Workbook Practice" [ref=e34] [cursor=pointer] [box=266,-5098,134,32]:
+              - generic [ref=e36] [box=277,-5095,113,25]: Workbook Practice
+            - tab "Reference Desk" [selected] [ref=e37] [cursor=pointer] [box=400,-5098,116,32]:
+              - generic [ref=e39] [box=411,-5095,94,25]: Reference Desk
+            - tab "Real Agent Run Triage" [ref=e40] [cursor=pointer] [box=516,-5098,156,32]:
+              - generic [ref=e42] [box=527,-5095,135,25]: Real Agent Run Triage
+          - tabpanel "Reference Desk" [ref=e241] [box=25,-5055,651,25]:
+            - generic [ref=e1109] [box=25,-5055,651,25]: Reference Desk
+      - generic [ref=e50] [box=101,-5013,1103,15174]:
+        - heading "Reference Desk" [level=2] [ref=e1110] [box=101,-5013,1103,29]
+        - generic [ref=e54] [box=101,-4977,1103,25]: Fast lookup while you supervise real agents. Switch between glossary, command anatomy, the quick reference, and the cheat sheets.
+        - generic [ref=e1113] [box=101,-4945,310,25]:
+          - generic [ref=e1117] [box=101,-4945,61,25]: Reference
+          - combobox "Reference" [ref=e1118] [cursor=pointer] [box=167,-4945,237,22]:
+            - option "Glossary" [selected] [box=0,0,0,0]
+            - option "Command anatomy" [box=0,0,0,0]
+            - option "Quick reference" [box=0,0,0,0]
+            - option "Testing & verification cheat sheet" [box=0,0,0,0]
+            - option "Git & diff cheat sheet" [box=0,0,0,0]
+        - heading "Glossary" [level=3] [ref=e1120] [box=101,-4912,1103,29]
+        - generic [ref=e1121] [box=101,-4876,1103,50]:
+          - generic [ref=e1125] [box=101,-4876,238,25]:
+            - generic [ref=e1129] [box=101,-4876,54,25]: Category
+            - combobox "Category" [ref=e1130] [cursor=pointer] [box=160,-4876,171,22]:
+              - option "All" [selected] [box=0,0,0,0]
+              - option "App runtime" [box=0,0,0,0]
+              - option "Coding agents" [box=0,0,0,0]
+              - option "Files and paths" [box=0,0,0,0]
+              - option "Git" [box=0,0,0,0]
+              - option "Live data and safety" [box=0,0,0,0]
+              - option "Orchestration prompts" [box=0,0,0,0]
+              - option "Repo structure" [box=0,0,0,0]
+              - option "Terminal and shell" [box=0,0,0,0]
+              - option "Tests" [box=0,0,0,0]
+          - generic [ref=e1134] [box=353,-4876,851,47]:
+            - generic [ref=e1138] [box=353,-4876,41,25]: Search
+            - textbox "term, definition, or topic" [ref=e1140] [box=353,-4851,851,22]
+        - generic [ref=e275] [box=101,-4819,1103,25]:
+          - strong [ref=e1141] [box=101,-4816,25,19]: "107"
+          - text: entries shown.
+        - generic [ref=e277] [box=101,-4786,1103,14947]:
+          - article [ref=e1142] [box=101,-4786,1103,187]:
+            - heading "Shell" [level=3] [ref=e1143] [box=120,-4769,1067,29]
+            - generic [ref=e1144] [box=120,-4737,1067,20]: Terminal and shell
+            - generic [ref=e1145] [box=120,-4705,1067,22]: Program that interprets terminal commands.
+            - generic [ref=e1146] [box=120,-4671,1067,22]:
+              - strong [ref=e1147] [box=120,-4669,96,17]: "Why you see it:"
+              - text: Bash, zsh, and PowerShell differ.
+            - generic [ref=e1148] [box=120,-4638,1067,22]:
+              - strong [ref=e1149] [box=120,-4636,79,17]: "What to ask:"
+              - text: Which shell was this written for?
+          - article [ref=e1150] [box=101,-4587,1103,187]:
+            - heading "Bash" [level=3] [ref=e1151] [box=120,-4570,1067,29]
+            - generic [ref=e1152] [box=120,-4537,1067,20]: Terminal and shell
+            - generic [ref=e1153] [box=120,-4506,1067,22]: Common Unix-style shell.
+            - generic [ref=e1154] [box=120,-4472,1067,22]:
+              - strong [ref=e1155] [box=120,-4470,96,17]: "Why you see it:"
+              - text: Many agent commands use Bash syntax.
+            - generic [ref=e1156] [box=120,-4438,1067,22]:
+              - strong [ref=e1157] [box=120,-4436,79,17]: "What to ask:"
+              - text: Will this work on my machine?
+          - article [ref=e1158] [box=101,-4387,1103,187]:
+            - heading "zsh" [level=3] [ref=e1159] [box=120,-4370,1067,29]
+            - generic [ref=e1160] [box=120,-4338,1067,20]: Terminal and shell
+            - generic [ref=e1161] [box=120,-4306,1067,22]: Common macOS shell.
+            - generic [ref=e1162] [box=120,-4272,1067,22]:
+              - strong [ref=e1163] [box=120,-4270,96,17]: "Why you see it:"
+              - text: Mac terminals often use zsh.
+            - generic [ref=e1164] [box=120,-4239,1067,22]:
+              - strong [ref=e1165] [box=120,-4237,79,17]: "What to ask:"
+              - text: Is this zsh-compatible?
+          - article [ref=e1166] [box=101,-4188,1103,187]:
+            - heading "PowerShell" [level=3] [ref=e1167] [box=120,-4171,1067,29]
+            - generic [ref=e1168] [box=120,-4138,1067,20]: Terminal and shell
+            - generic [ref=e1169] [box=120,-4107,1067,22]: Windows shell with different syntax.
+            - generic [ref=e1170] [box=120,-4073,1067,22]:
+              - strong [ref=e1171] [box=120,-4071,96,17]: "Why you see it:"
+              - text: Windows instructions may use PowerShell.
+            - generic [ref=e1172] [box=120,-4039,1067,22]:
+              - strong [ref=e1173] [box=120,-4037,79,17]: "What to ask:"
+              - text: Is there a PowerShell version?
+          - article [ref=e1174] [box=101,-3989,1103,187]:
+            - heading "Command" [level=3] [ref=e1175] [box=120,-3972,1067,29]
+            - generic [ref=e1176] [box=120,-3939,1067,20]: Terminal and shell
+            - generic [ref=e1177] [box=120,-3907,1067,22]: Instruction executed by the shell.
+            - generic [ref=e1178] [box=120,-3873,1067,22]:
+              - strong [ref=e1179] [box=120,-3871,96,17]: "Why you see it:"
+              - text: Agents run commands constantly.
+            - generic [ref=e1180] [box=120,-3840,1067,22]:
+              - strong [ref=e1181] [box=120,-3838,79,17]: "What to ask:"
+              - text: Is it read-only, changing files, testing, building, launching, or live-sensitive?
+          - article [ref=e1182] [box=101,-3789,1103,187]:
+            - heading "Program" [level=3] [ref=e1183] [box=120,-3772,1067,29]
+            - generic [ref=e1184] [box=120,-3739,1067,20]: Terminal and shell
+            - generic [ref=e1185] [box=120,-3708,1067,22]: First executable token, such as git, npm, uv, python, curl.
+            - generic [ref=e1186] [box=120,-3674,1067,22]:
+              - strong [ref=e1187] [box=120,-3672,96,17]: "Why you see it:"
+              - text: Identifies the tool being invoked.
+            - generic [ref=e1188] [box=120,-3640,1067,22]:
+              - strong [ref=e1189] [box=120,-3638,79,17]: "What to ask:"
+              - text: What program is being run?
+          - article [ref=e1190] [box=101,-3590,1103,187]:
+            - heading "Subcommand" [level=3] [ref=e1191] [box=120,-3573,1067,29]
+            - generic [ref=e1192] [box=120,-3540,1067,20]: Terminal and shell
+            - generic [ref=e1193] [box=120,-3508,1067,22]: Secondary action, such as status in git status.
+            - generic [ref=e1194] [box=120,-3475,1067,22]:
+              - strong [ref=e1195] [box=120,-3473,96,17]: "Why you see it:"
+              - text: Many tools use subcommands.
+            - generic [ref=e1196] [box=120,-3441,1067,22]:
+              - strong [ref=e1197] [box=120,-3439,79,17]: "What to ask:"
+              - text: What action is requested?
+          - article [ref=e1198] [box=101,-3390,1103,187]:
+            - heading "Flag" [level=3] [ref=e1199] [box=120,-3373,1067,29]
+            - generic [ref=e1200] [box=120,-3340,1067,20]: Terminal and shell
+            - generic [ref=e1201] [box=120,-3309,1067,22]: Option beginning with - or --.
+            - generic [ref=e1202] [box=120,-3275,1067,22]:
+              - strong [ref=e1203] [box=120,-3273,96,17]: "Why you see it:"
+              - text: Flags alter command behavior.
+            - generic [ref=e1204] [box=120,-3241,1067,22]:
+              - strong [ref=e1205] [box=120,-3239,79,17]: "What to ask:"
+              - text: What does this flag change?
+          - article [ref=e1206] [box=101,-3191,1103,187]:
+            - heading "Argument" [level=3] [ref=e1207] [box=120,-3174,1067,29]
+            - generic [ref=e1208] [box=120,-3141,1067,20]: Terminal and shell
+            - generic [ref=e1209] [box=120,-3109,1067,22]: Value passed to a command.
+            - generic [ref=e1210] [box=120,-3076,1067,22]:
+              - strong [ref=e1211] [box=120,-3074,96,17]: "Why you see it:"
+              - text: Arguments identify targets.
+            - generic [ref=e1212] [box=120,-3042,1067,22]:
+              - strong [ref=e1213] [box=120,-3040,79,17]: "What to ask:"
+              - text: What file, URL, symbol, or value is targeted?
+          - article [ref=e1214] [box=101,-2991,1103,187]:
+            - heading "Working directory" [level=3] [ref=e1215] [box=120,-2974,1067,29]
+            - generic [ref=e1216] [box=120,-2941,1067,20]: Terminal and shell
+            - generic [ref=e1217] [box=120,-2910,1067,22]: Folder where the command runs.
+            - generic [ref=e1218] [box=120,-2876,1067,22]:
+              - strong [ref=e1219] [box=120,-2874,96,17]: "Why you see it:"
+              - text: Wrong folders cause misleading errors.
+            - generic [ref=e1220] [box=120,-2843,1067,22]:
+              - strong [ref=e1221] [box=120,-2841,79,17]: "What to ask:"
+              - text: Where was this run from?
+          - article [ref=e1222] [box=101,-2792,1103,187]:
+            - heading "stdout" [level=3] [ref=e1223] [box=120,-2775,1067,29]
+            - generic [ref=e1224] [box=120,-2742,1067,20]: Terminal and shell
+            - generic [ref=e1225] [box=120,-2710,1067,22]: Normal command output.
+            - generic [ref=e1226] [box=120,-2677,1067,22]:
+              - strong [ref=e1227] [box=120,-2675,96,17]: "Why you see it:"
+              - text: Agents paste it as evidence.
+            - generic [ref=e1228] [box=120,-2643,1067,22]:
+              - strong [ref=e1229] [box=120,-2641,79,17]: "What to ask:"
+              - text: Is this normal output?
+          - article [ref=e1230] [box=101,-2592,1103,187]:
+            - heading "stderr" [level=3] [ref=e1231] [box=120,-2575,1067,29]
+            - generic [ref=e1232] [box=120,-2543,1067,20]: Terminal and shell
+            - generic [ref=e1233] [box=120,-2511,1067,22]: Error or diagnostic output.
+            - generic [ref=e1234] [box=120,-2477,1067,22]:
+              - strong [ref=e1235] [box=120,-2475,96,17]: "Why you see it:"
+              - text: Some tools print warnings there.
+            - generic [ref=e1236] [box=120,-2444,1067,22]:
+              - strong [ref=e1237] [box=120,-2442,79,17]: "What to ask:"
+              - text: Did the exit code still pass?
+          - article [ref=e1238] [box=101,-2393,1103,187]:
+            - heading "Exit code" [level=3] [ref=e1239] [box=120,-2376,1067,29]
+            - generic [ref=e1240] [box=120,-2343,1067,20]: Terminal and shell
+            - generic [ref=e1241] [box=120,-2312,1067,22]: Numeric command result. Zero usually means success.
+            - generic [ref=e1242] [box=120,-2278,1067,22]:
+              - strong [ref=e1243] [box=120,-2276,96,17]: "Why you see it:"
+              - text: Agents may use it to claim success.
+            - generic [ref=e1244] [box=120,-2244,1067,22]:
+              - strong [ref=e1245] [box=120,-2242,79,17]: "What to ask:"
+              - text: What was the exit code?
+          - article [ref=e1246] [box=101,-2193,1103,187]:
+            - heading "Pipe" [level=3] [ref=e1247] [box=120,-2176,1067,29]
+            - generic [ref=e1248] [box=120,-2144,1067,20]: Terminal and shell
+            - generic [ref=e1249] [box=120,-2112,1067,22]: Sends one command output into another.
+            - generic [ref=e1250] [box=120,-2078,1067,22]:
+              - strong [ref=e1251] [box=120,-2076,96,17]: "Why you see it:"
+              - text: Agents filter logs/search results.
+            - generic [ref=e1252] [box=120,-2045,1067,22]:
+              - strong [ref=e1253] [box=120,-2043,79,17]: "What to ask:"
+              - text: What output is passed forward?
+          - article [ref=e1254] [box=101,-1994,1103,187]:
+            - heading "Redirect" [level=3] [ref=e1255] [box=120,-1977,1067,29]
+            - generic [ref=e1256] [box=120,-1944,1067,20]: Terminal and shell
+            - generic [ref=e1257] [box=120,-1913,1067,22]: Sends output to a file or discards it.
+            - generic [ref=e1258] [box=120,-1879,1067,22]:
+              - strong [ref=e1259] [box=120,-1877,96,17]: "Why you see it:"
+              - text: Agents may hide or save output.
+            - generic [ref=e1260] [box=120,-1845,1067,22]:
+              - strong [ref=e1261] [box=120,-1843,79,17]: "What to ask:"
+              - text: Where did the output go?
+          - article [ref=e1262] [box=101,-1795,1103,187]:
+            - heading "File" [level=3] [ref=e1263] [box=120,-1778,1067,29]
+            - generic [ref=e1264] [box=120,-1745,1067,20]: Files and paths
+            - generic [ref=e1265] [box=120,-1713,1067,22]: Named unit of content.
+            - generic [ref=e1266] [box=120,-1679,1067,22]:
+              - strong [ref=e1267] [box=120,-1677,96,17]: "Why you see it:"
+              - text: Agents inspect and edit files.
+            - generic [ref=e1268] [box=120,-1646,1067,22]:
+              - strong [ref=e1269] [box=120,-1644,79,17]: "What to ask:"
+              - text: What kind of file is this?
+          - article [ref=e1270] [box=101,-1595,1103,187]:
+            - heading "Folder / directory" [level=3] [ref=e1271] [box=120,-1578,1067,29]
+            - generic [ref=e1272] [box=120,-1545,1067,20]: Files and paths
+            - generic [ref=e1273] [box=120,-1514,1067,22]: Container for files.
+            - generic [ref=e1274] [box=120,-1480,1067,22]:
+              - strong [ref=e1275] [box=120,-1478,96,17]: "Why you see it:"
+              - text: Repo structure is folder-based.
+            - generic [ref=e1276] [box=120,-1446,1067,22]:
+              - strong [ref=e1277] [box=120,-1444,79,17]: "What to ask:"
+              - text: What does this folder imply?
+          - article [ref=e1278] [box=101,-1396,1103,187]:
+            - heading "Path" [level=3] [ref=e1279] [box=120,-1379,1067,29]
+            - generic [ref=e1280] [box=120,-1346,1067,20]: Files and paths
+            - generic [ref=e1281] [box=120,-1314,1067,22]: Location of a file or folder.
+            - generic [ref=e1282] [box=120,-1281,1067,22]:
+              - strong [ref=e1283] [box=120,-1279,96,17]: "Why you see it:"
+              - text: Every change and many commands include paths.
+            - generic [ref=e1284] [box=120,-1247,1067,22]:
+              - strong [ref=e1285] [box=120,-1245,79,17]: "What to ask:"
+              - text: Is this source, tests, docs, config, script, or local state?
+          - article [ref=e1286] [box=101,-1196,1103,187]:
+            - heading "Absolute path" [level=3] [ref=e1287] [box=120,-1179,1067,29]
+            - generic [ref=e1288] [box=120,-1146,1067,20]: Files and paths
+            - generic [ref=e1289] [box=120,-1115,1067,22]: Full path from machine root.
+            - generic [ref=e1290] [box=120,-1081,1067,22]:
+              - strong [ref=e1291] [box=120,-1079,96,17]: "Why you see it:"
+              - text: Removes ambiguity.
+            - generic [ref=e1292] [box=120,-1047,1067,22]:
+              - strong [ref=e1293] [box=120,-1045,79,17]: "What to ask:"
+              - text: Does it point to the intended repo?
+          - article [ref=e1294] [box=101,-997,1103,187]:
+            - heading "Relative path" [level=3] [ref=e1295] [box=120,-980,1067,29]
+            - generic [ref=e1296] [box=120,-947,1067,20]: Files and paths
+            - generic [ref=e1297] [box=120,-915,1067,22]: Path from current working directory.
+            - generic [ref=e1298] [box=120,-882,1067,22]:
+              - strong [ref=e1299] [box=120,-880,96,17]: "Why you see it:"
+              - text: Most repo commands use relative paths.
+            - generic [ref=e1300] [box=120,-848,1067,22]:
+              - strong [ref=e1301] [box=120,-846,79,17]: "What to ask:"
+              - text: Relative to what folder?
+          - article [ref=e1302] [box=101,-797,1103,187]:
+            - heading "Repo root" [level=3] [ref=e1303] [box=120,-780,1067,29]
+            - generic [ref=e1304] [box=120,-747,1067,20]: Files and paths
+            - generic [ref=e1305] [box=120,-716,1067,22]: Top-level Git project folder.
+            - generic [ref=e1306] [box=120,-682,1067,22]:
+              - strong [ref=e1307] [box=120,-680,96,17]: "Why you see it:"
+              - text: Many commands must run there.
+            - generic [ref=e1308] [box=120,-649,1067,22]:
+              - strong [ref=e1309] [box=120,-647,79,17]: "What to ask:"
+              - text: What command confirms the repo root?
+          - article [ref=e1310] [box=101,-598,1103,187]:
+            - heading "Extension" [level=3] [ref=e1311] [box=120,-581,1067,29]
+            - generic [ref=e1312] [box=120,-548,1067,20]: Files and paths
+            - generic [ref=e1313] [box=120,-516,1067,22]: Filename suffix like .py, .md, .toml.
+            - generic [ref=e1314] [box=120,-483,1067,22]:
+              - strong [ref=e1315] [box=120,-481,96,17]: "Why you see it:"
+              - text: Suggests file type.
+            - generic [ref=e1316] [box=120,-449,1067,22]:
+              - strong [ref=e1317] [box=120,-447,79,17]: "What to ask:"
+              - text: What does the extension imply?
+          - article [ref=e1318] [box=101,-398,1103,187]:
+            - heading "Hidden file" [level=3] [ref=e1319] [box=120,-381,1067,29]
+            - generic [ref=e1320] [box=120,-349,1067,20]: Files and paths
+            - generic [ref=e1321] [box=120,-317,1067,22]: File beginning with dot.
+            - generic [ref=e1322] [box=120,-283,1067,22]:
+              - strong [ref=e1323] [box=120,-281,96,17]: "Why you see it:"
+              - text: Hidden files can be critical.
+            - generic [ref=e1324] [box=120,-250,1067,22]:
+              - strong [ref=e1325] [box=120,-248,79,17]: "What to ask:"
+              - text: Is it safe to inspect or commit?
+          - article [ref=e1326] [box=101,-199,1103,187]:
+            - heading ".env" [level=3] [ref=e1327] [box=120,-182,1067,29]
+            - generic [ref=e1328] [box=120,-149,1067,20]: Files and paths
+            - generic [ref=e1329] [box=120,-118,1067,22]: Environment-variable file that may contain secrets.
+            - generic [ref=e1330] [box=120,-84,1067,22]:
+              - strong [ref=e1331] [box=120,-82,96,17]: "Why you see it:"
+              - text: Agents may reference it for config.
+            - generic [ref=e1332] [box=120,-50,1067,22]:
+              - strong [ref=e1333] [box=120,-48,79,17]: "What to ask:"
+              - text: Did it contain real secrets?
+          - article [ref=e1334] [box=101,1,1103,187]:
+            - heading ".state" [level=3] [ref=e1335] [box=120,18,1067,29]
+            - generic [ref=e1336] [box=120,50,1067,20]: Files and paths
+            - generic [ref=e1337] [box=120,82,1067,22]: Local runtime state/cache/token folder.
+            - generic [ref=e1338] [box=120,116,1067,22]:
+              - strong [ref=e1339] [box=120,118,96,17]: "Why you see it:"
+              - text: Apps may store generated state there.
+            - generic [ref=e1340] [box=120,149,1067,22]:
+              - strong [ref=e1341] [box=120,151,79,17]: "What to ask:"
+              - text: Is it excluded from Git?
+          - article [ref=e1342] [box=101,200,1103,187]:
+            - heading "Git" [level=3] [ref=e1343] [box=120,217,1067,29]
+            - generic [ref=e1344] [box=120,250,1067,20]: Git
+            - generic [ref=e1345] [box=120,281,1067,22]: Version-control tool.
+            - generic [ref=e1346] [box=120,315,1067,22]:
+              - strong [ref=e1347] [box=120,317,96,17]: "Why you see it:"
+              - text: Tracks what changed.
+            - generic [ref=e1348] [box=120,349,1067,22]:
+              - strong [ref=e1349] [box=120,351,79,17]: "What to ask:"
+              - text: What does Git say changed?
+          - article [ref=e1350] [box=101,399,1103,187]:
+            - heading "GitHub" [level=3] [ref=e1351] [box=120,416,1067,29]
+            - generic [ref=e1352] [box=120,449,1067,20]: Git
+            - generic [ref=e1353] [box=120,481,1067,22]: Hosted Git platform.
+            - generic [ref=e1354] [box=120,515,1067,22]:
+              - strong [ref=e1355] [box=120,517,96,17]: "Why you see it:"
+              - text: Remote repo may live there.
+            - generic [ref=e1356] [box=120,548,1067,22]:
+              - strong [ref=e1357] [box=120,550,79,17]: "What to ask:"
+              - text: Is work local or pushed?
+          - article [ref=e1358] [box=101,599,1103,187]:
+            - heading "Repository" [level=3] [ref=e1359] [box=120,616,1067,29]
+            - generic [ref=e1360] [box=120,649,1067,20]: Git
+            - generic [ref=e1361] [box=120,680,1067,22]: Project tracked by Git.
+            - generic [ref=e1362] [box=120,714,1067,22]:
+              - strong [ref=e1363] [box=120,716,96,17]: "Why you see it:"
+              - text: Agents work inside repos.
+            - generic [ref=e1364] [box=120,748,1067,22]:
+              - strong [ref=e1365] [box=120,750,79,17]: "What to ask:"
+              - text: Which repo is active?
+          - article [ref=e1366] [box=101,798,1103,187]:
+            - heading "Branch" [level=3] [ref=e1367] [box=120,815,1067,29]
+            - generic [ref=e1368] [box=120,848,1067,20]: Git
+            - generic [ref=e1369] [box=120,880,1067,22]: Named line of development.
+            - generic [ref=e1370] [box=120,913,1067,22]:
+              - strong [ref=e1371] [box=120,915,96,17]: "Why you see it:"
+              - text: Work may be on main or feature branch.
+            - generic [ref=e1372] [box=120,947,1067,22]:
+              - strong [ref=e1373] [box=120,949,79,17]: "What to ask:"
+              - text: What branch is checked out?
+          - article [ref=e1374] [box=101,998,1103,187]:
+            - heading "main" [level=3] [ref=e1375] [box=120,1015,1067,29]
+            - generic [ref=e1376] [box=120,1048,1067,20]: Git
+            - generic [ref=e1377] [box=120,1079,1067,22]: Common primary branch.
+            - generic [ref=e1378] [box=120,1113,1067,22]:
+              - strong [ref=e1379] [box=120,1115,96,17]: "Why you see it:"
+              - text: Some work happens directly there.
+            - generic [ref=e1380] [box=120,1147,1067,22]:
+              - strong [ref=e1381] [box=120,1149,79,17]: "What to ask:"
+              - text: Is direct work on main expected?
+          - article [ref=e1382] [box=101,1197,1103,187]:
+            - heading "Working tree" [level=3] [ref=e1383] [box=120,1214,1067,29]
+            - generic [ref=e1384] [box=120,1247,1067,20]: Git
+            - generic [ref=e1385] [box=120,1279,1067,22]: Current repo files and changes.
+            - generic [ref=e1386] [box=120,1312,1067,22]:
+              - strong [ref=e1387] [box=120,1314,96,17]: "Why you see it:"
+              - text: Git status reports it.
+            - generic [ref=e1388] [box=120,1346,1067,22]:
+              - strong [ref=e1389] [box=120,1348,79,17]: "What to ask:"
+              - text: Is it clean or dirty?
+          - article [ref=e1390] [box=101,1397,1103,187]:
+            - heading "Staged change" [level=3] [ref=e1391] [box=120,1414,1067,29]
+            - generic [ref=e1392] [box=120,1446,1067,20]: Git
+            - generic [ref=e1393] [box=120,1478,1067,22]: Change prepared for commit.
+            - generic [ref=e1394] [box=120,1512,1067,22]:
+              - strong [ref=e1395] [box=120,1514,96,17]: "Why you see it:"
+              - text: Agents stage before commit.
+            - generic [ref=e1396] [box=120,1545,1067,22]:
+              - strong [ref=e1397] [box=120,1547,79,17]: "What to ask:"
+              - text: Will this be included?
+          - article [ref=e1398] [box=101,1596,1103,187]:
+            - heading "Unstaged change" [level=3] [ref=e1399] [box=120,1613,1067,29]
+            - generic [ref=e1400] [box=120,1646,1067,20]: Git
+            - generic [ref=e1401] [box=120,1678,1067,22]: Changed file not staged.
+            - generic [ref=e1402] [box=120,1711,1067,22]:
+              - strong [ref=e1403] [box=120,1713,96,17]: "Why you see it:"
+              - text: May be omitted from commit.
+            - generic [ref=e1404] [box=120,1745,1067,22]:
+              - strong [ref=e1405] [box=120,1747,79,17]: "What to ask:"
+              - text: Should it be staged?
+          - article [ref=e1406] [box=101,1796,1103,187]:
+            - heading "Untracked file" [level=3] [ref=e1407] [box=120,1813,1067,29]
+            - generic [ref=e1408] [box=120,1845,1067,20]: Git
+            - generic [ref=e1409] [box=120,1877,1067,22]: New file Git is not tracking.
+            - generic [ref=e1410] [box=120,1911,1067,22]:
+              - strong [ref=e1411] [box=120,1913,96,17]: "Why you see it:"
+              - text: New tests/docs/scripts start untracked.
+            - generic [ref=e1412] [box=120,1944,1067,22]:
+              - strong [ref=e1413] [box=120,1946,79,17]: "What to ask:"
+              - text: Should it be added or ignored?
+          - article [ref=e1414] [box=101,1995,1103,187]:
+            - heading "Commit" [level=3] [ref=e1415] [box=120,2012,1067,29]
+            - generic [ref=e1416] [box=120,2045,1067,20]: Git
+            - generic [ref=e1417] [box=120,2076,1067,22]: Saved checkpoint.
+            - generic [ref=e1418] [box=120,2110,1067,22]:
+              - strong [ref=e1419] [box=120,2112,96,17]: "Why you see it:"
+              - text: Agents may commit finished work.
+            - generic [ref=e1420] [box=120,2144,1067,22]:
+              - strong [ref=e1421] [box=120,2146,79,17]: "What to ask:"
+              - text: What files are in the commit?
+          - article [ref=e1422] [box=101,2195,1103,187]:
+            - heading "Commit hash" [level=3] [ref=e1423] [box=120,2212,1067,29]
+            - generic [ref=e1424] [box=120,2244,1067,20]: Git
+            - generic [ref=e1425] [box=120,2276,1067,22]: Unique commit identifier.
+            - generic [ref=e1426] [box=120,2310,1067,22]:
+              - strong [ref=e1427] [box=120,2312,96,17]: "Why you see it:"
+              - text: Used as a checkpoint reference.
+            - generic [ref=e1428] [box=120,2343,1067,22]:
+              - strong [ref=e1429] [box=120,2345,79,17]: "What to ask:"
+              - text: Which exact commit?
+          - article [ref=e1430] [box=101,2394,1103,187]:
+            - heading "Diff" [level=3] [ref=e1431] [box=120,2411,1067,29]
+            - generic [ref=e1432] [box=120,2444,1067,20]: Git
+            - generic [ref=e1433] [box=120,2475,1067,22]: Line-by-line change evidence.
+            - generic [ref=e1434] [box=120,2509,1067,22]:
+              - strong [ref=e1435] [box=120,2511,96,17]: "Why you see it:"
+              - text: Proves what actually changed.
+            - generic [ref=e1436] [box=120,2543,1067,22]:
+              - strong [ref=e1437] [box=120,2545,79,17]: "What to ask:"
+              - text: Does the diff support the claim?
+          - article [ref=e1438] [box=101,2593,1103,187]:
+            - heading "Remote" [level=3] [ref=e1439] [box=120,2610,1067,29]
+            - generic [ref=e1440] [box=120,2643,1067,20]: Git
+            - generic [ref=e1441] [box=120,2675,1067,22]: Linked GitHub repo.
+            - generic [ref=e1442] [box=120,2708,1067,22]:
+              - strong [ref=e1443] [box=120,2710,96,17]: "Why you see it:"
+              - text: Local work may not be remote.
+            - generic [ref=e1444] [box=120,2742,1067,22]:
+              - strong [ref=e1445] [box=120,2744,79,17]: "What to ask:"
+              - text: Was it pushed?
+          - article [ref=e1446] [box=101,2793,1103,187]:
+            - heading "Push" [level=3] [ref=e1447] [box=120,2810,1067,29]
+            - generic [ref=e1448] [box=120,2843,1067,20]: Git
+            - generic [ref=e1449] [box=120,2874,1067,22]: Send local commits to remote.
+            - generic [ref=e1450] [box=120,2908,1067,22]:
+              - strong [ref=e1451] [box=120,2910,96,17]: "Why you see it:"
+              - text: Makes work visible on GitHub.
+            - generic [ref=e1452] [box=120,2942,1067,22]:
+              - strong [ref=e1453] [box=120,2944,79,17]: "What to ask:"
+              - text: Was the commit pushed?
+          - article [ref=e1454] [box=101,2992,1103,187]:
+            - heading "Pull" [level=3] [ref=e1455] [box=120,3009,1067,29]
+            - generic [ref=e1456] [box=120,3042,1067,20]: Git
+            - generic [ref=e1457] [box=120,3074,1067,22]: Bring remote changes local.
+            - generic [ref=e1458] [box=120,3107,1067,22]:
+              - strong [ref=e1459] [box=120,3109,96,17]: "Why you see it:"
+              - text: Updates repo before work.
+            - generic [ref=e1460] [box=120,3141,1067,22]:
+              - strong [ref=e1461] [box=120,3143,79,17]: "What to ask:"
+              - text: Could this conflict?
+          - article [ref=e1462] [box=101,3192,1103,187]:
+            - heading "src" [level=3] [ref=e1463] [box=120,3209,1067,29]
+            - generic [ref=e1464] [box=120,3242,1067,20]: Repo structure
+            - generic [ref=e1465] [box=120,3273,1067,22]: Source-code folder.
+            - generic [ref=e1466] [box=120,3307,1067,22]:
+              - strong [ref=e1467] [box=120,3309,96,17]: "Why you see it:"
+              - text: Often affects runtime behavior.
+            - generic [ref=e1468] [box=120,3341,1067,22]:
+              - strong [ref=e1469] [box=120,3343,79,17]: "What to ask:"
+              - text: Is this on the app path?
+          - article [ref=e1470] [box=101,3391,1103,187]:
+            - heading "tests" [level=3] [ref=e1471] [box=120,3408,1067,29]
+            - generic [ref=e1472] [box=120,3441,1067,20]: Repo structure
+            - generic [ref=e1473] [box=120,3473,1067,22]: Automated tests folder.
+            - generic [ref=e1474] [box=120,3506,1067,22]:
+              - strong [ref=e1475] [box=120,3508,96,17]: "Why you see it:"
+              - text: Agents add/update tests.
+            - generic [ref=e1476] [box=120,3540,1067,22]:
+              - strong [ref=e1477] [box=120,3542,79,17]: "What to ask:"
+              - text: Do these cover the change?
+          - article [ref=e1478] [box=101,3591,1103,187]:
+            - heading "docs" [level=3] [ref=e1479] [box=120,3608,1067,29]
+            - generic [ref=e1480] [box=120,3640,1067,20]: Repo structure
+            - generic [ref=e1481] [box=120,3672,1067,22]: Documentation folder.
+            - generic [ref=e1482] [box=120,3706,1067,22]:
+              - strong [ref=e1483] [box=120,3708,96,17]: "Why you see it:"
+              - text: Explains behavior.
+            - generic [ref=e1484] [box=120,3739,1067,22]:
+              - strong [ref=e1485] [box=120,3741,79,17]: "What to ask:"
+              - text: Was docs-only work overclaimed?
+          - article [ref=e1486] [box=101,3790,1103,187]:
+            - heading "scripts" [level=3] [ref=e1487] [box=120,3807,1067,29]
+            - generic [ref=e1488] [box=120,3840,1067,20]: Repo structure
+            - generic [ref=e1489] [box=120,3872,1067,22]: Utility/launch/check scripts.
+            - generic [ref=e1490] [box=120,3905,1067,22]:
+              - strong [ref=e1491] [box=120,3907,96,17]: "Why you see it:"
+              - text: Agents add commands here.
+            - generic [ref=e1492] [box=120,3939,1067,22]:
+              - strong [ref=e1493] [box=120,3941,79,17]: "What to ask:"
+              - text: Was the script actually run?
+          - article [ref=e1494] [box=101,3990,1103,187]:
+            - heading "config" [level=3] [ref=e1495] [box=120,4007,1067,29]
+            - generic [ref=e1496] [box=120,4039,1067,20]: Repo structure
+            - generic [ref=e1497] [box=120,4071,1067,22]: Settings files/folders.
+            - generic [ref=e1498] [box=120,4105,1067,22]:
+              - strong [ref=e1499] [box=120,4107,96,17]: "Why you see it:"
+              - text: Can affect broad behavior.
+            - generic [ref=e1500] [box=120,4138,1067,22]:
+              - strong [ref=e1501] [box=120,4140,79,17]: "What to ask:"
+              - text: What behavior does this config affect?
+          - article [ref=e1502] [box=101,4189,1103,187]:
+            - heading "package.json" [level=3] [ref=e1503] [box=120,4206,1067,29]
+            - generic [ref=e1504] [box=120,4239,1067,20]: Repo structure
+            - generic [ref=e1505] [box=120,4270,1067,22]: JavaScript/TypeScript project file.
+            - generic [ref=e1506] [box=120,4304,1067,22]:
+              - strong [ref=e1507] [box=120,4306,96,17]: "Why you see it:"
+              - text: npm scripts/dependencies live here.
+            - generic [ref=e1508] [box=120,4338,1067,22]:
+              - strong [ref=e1509] [box=120,4340,79,17]: "What to ask:"
+              - text: Which script changed?
+          - article [ref=e1510] [box=101,4388,1103,187]:
+            - heading "pyproject.toml" [level=3] [ref=e1511] [box=120,4405,1067,29]
+            - generic [ref=e1512] [box=120,4438,1067,20]: Repo structure
+            - generic [ref=e1513] [box=120,4470,1067,22]: Python project config.
+            - generic [ref=e1514] [box=120,4504,1067,22]:
+              - strong [ref=e1515] [box=120,4506,96,17]: "Why you see it:"
+              - text: Dependencies/tooling may live here.
+            - generic [ref=e1516] [box=120,4537,1067,22]:
+              - strong [ref=e1517] [box=120,4539,79,17]: "What to ask:"
+              - text: Did this affect dependency/test/lint behavior?
+          - article [ref=e1518] [box=101,4588,1103,187]:
+            - heading "README.md" [level=3] [ref=e1519] [box=120,4605,1067,29]
+            - generic [ref=e1520] [box=120,4638,1067,20]: Repo structure
+            - generic [ref=e1521] [box=120,4669,1067,22]: Main project overview.
+            - generic [ref=e1522] [box=120,4703,1067,22]:
+              - strong [ref=e1523] [box=120,4705,96,17]: "Why you see it:"
+              - text: Agents update setup docs.
+            - generic [ref=e1524] [box=120,4737,1067,22]:
+              - strong [ref=e1525] [box=120,4739,79,17]: "What to ask:"
+              - text: Is this only documentation?
+          - article [ref=e1526] [box=101,4787,1103,187]:
+            - heading ".gitignore" [level=3] [ref=e1527] [box=120,4804,1067,29]
+            - generic [ref=e1528] [box=120,4837,1067,20]: Repo structure
+            - generic [ref=e1529] [box=120,4869,1067,22]: Tells Git what to ignore.
+            - generic [ref=e1530] [box=120,4902,1067,22]:
+              - strong [ref=e1531] [box=120,4904,96,17]: "Why you see it:"
+              - text: Protects local/generated files.
+            - generic [ref=e1532] [box=120,4936,1067,22]:
+              - strong [ref=e1533] [box=120,4938,79,17]: "What to ask:"
+              - text: Were secrets already tracked?
+          - article [ref=e1534] [box=101,4987,1103,187]:
+            - heading "Test" [level=3] [ref=e1535] [box=120,5004,1067,29]
+            - generic [ref=e1536] [box=120,5037,1067,20]: Tests
+            - generic [ref=e1537] [box=120,5068,1067,22]: Check for expected behavior.
+            - generic [ref=e1538] [box=120,5102,1067,22]:
+              - strong [ref=e1539] [box=120,5104,96,17]: "Why you see it:"
+              - text: Agents use tests as evidence.
+            - generic [ref=e1540] [box=120,5136,1067,22]:
+              - strong [ref=e1541] [box=120,5138,79,17]: "What to ask:"
+              - text: What behavior is tested?
+          - article [ref=e1542] [box=101,5186,1103,187]:
+            - heading "Unit test" [level=3] [ref=e1543] [box=120,5203,1067,29]
+            - generic [ref=e1544] [box=120,5236,1067,20]: Tests
+            - generic [ref=e1545] [box=120,5268,1067,22]: Small isolated logic test.
+            - generic [ref=e1546] [box=120,5301,1067,22]:
+              - strong [ref=e1547] [box=120,5303,96,17]: "Why you see it:"
+              - text: Fast focused verification.
+            - generic [ref=e1548] [box=120,5335,1067,22]:
+              - strong [ref=e1549] [box=120,5337,79,17]: "What to ask:"
+              - text: What unit is isolated?
+          - article [ref=e1550] [box=101,5386,1103,187]:
+            - heading "Integration test" [level=3] [ref=e1551] [box=120,5403,1067,29]
+            - generic [ref=e1552] [box=120,5436,1067,20]: Tests
+            - generic [ref=e1553] [box=120,5467,1067,22]: Multiple parts together.
+            - generic [ref=e1554] [box=120,5501,1067,22]:
+              - strong [ref=e1555] [box=120,5503,96,17]: "Why you see it:"
+              - text: Verifies wiring between components.
+            - generic [ref=e1556] [box=120,5535,1067,22]:
+              - strong [ref=e1557] [box=120,5537,79,17]: "What to ask:"
+              - text: Which components?
+          - article [ref=e1558] [box=101,5585,1103,187]:
+            - heading "Regression test" [level=3] [ref=e1559] [box=120,5602,1067,29]
+            - generic [ref=e1560] [box=120,5635,1067,20]: Tests
+            - generic [ref=e1561] [box=120,5667,1067,22]: Prevents old bug returning.
+            - generic [ref=e1562] [box=120,5700,1067,22]:
+              - strong [ref=e1563] [box=120,5702,96,17]: "Why you see it:"
+              - text: Agents add one after fixes.
+            - generic [ref=e1564] [box=120,5734,1067,22]:
+              - strong [ref=e1565] [box=120,5736,79,17]: "What to ask:"
+              - text: What bug does it guard?
+          - article [ref=e1566] [box=101,5785,1103,187]:
+            - heading "Smoke test" [level=3] [ref=e1567] [box=120,5802,1067,29]
+            - generic [ref=e1568] [box=120,5834,1067,20]: Tests
+            - generic [ref=e1569] [box=120,5866,1067,22]: Shallow startup/workflow check.
+            - generic [ref=e1570] [box=120,5900,1067,22]:
+              - strong [ref=e1571] [box=120,5902,96,17]: "Why you see it:"
+              - text: Proves basic viability.
+            - generic [ref=e1572] [box=120,5933,1067,22]:
+              - strong [ref=e1573] [box=120,5935,79,17]: "What to ask:"
+              - text: What did it actually smoke?
+          - article [ref=e1574] [box=101,5984,1103,187]:
+            - heading "Live smoke" [level=3] [ref=e1575] [box=120,6001,1067,29]
+            - generic [ref=e1576] [box=120,6034,1067,20]: Tests
+            - generic [ref=e1577] [box=120,6066,1067,22]: Narrow live-service check.
+            - generic [ref=e1578] [box=120,6099,1067,22]:
+              - strong [ref=e1579] [box=120,6101,96,17]: "Why you see it:"
+              - text: Needed for live-data proof.
+            - generic [ref=e1580] [box=120,6133,1067,22]:
+              - strong [ref=e1581] [box=120,6135,79,17]: "What to ask:"
+              - text: Was explicit live opt-in used?
+          - article [ref=e1582] [box=101,6184,1103,187]:
+            - heading "Dry run" [level=3] [ref=e1583] [box=120,6201,1067,29]
+            - generic [ref=e1584] [box=120,6233,1067,20]: Tests
+            - generic [ref=e1585] [box=120,6265,1067,22]: Safe run without live effects.
+            - generic [ref=e1586] [box=120,6299,1067,22]:
+              - strong [ref=e1587] [box=120,6301,96,17]: "Why you see it:"
+              - text: Tests readiness without risk.
+            - generic [ref=e1588] [box=120,6332,1067,22]:
+              - strong [ref=e1589] [box=120,6334,79,17]: "What to ask:"
+              - text: What did dry-run skip?
+          - article [ref=e1590] [box=101,6383,1103,187]:
+            - heading "Fixture" [level=3] [ref=e1591] [box=120,6400,1067,29]
+            - generic [ref=e1592] [box=120,6433,1067,20]: Tests
+            - generic [ref=e1593] [box=120,6464,1067,22]: Controlled test data.
+            - generic [ref=e1594] [box=120,6498,1067,22]:
+              - strong [ref=e1595] [box=120,6500,96,17]: "Why you see it:"
+              - text: Deterministic tests use it.
+            - generic [ref=e1596] [box=120,6532,1067,22]:
+              - strong [ref=e1597] [box=120,6534,79,17]: "What to ask:"
+              - text: Was fixture proof called live?
+          - article [ref=e1598] [box=101,6582,1103,187]:
+            - heading "Mock" [level=3] [ref=e1599] [box=120,6599,1067,29]
+            - generic [ref=e1600] [box=120,6632,1067,20]: Tests
+            - generic [ref=e1601] [box=120,6664,1067,22]: Fake replacement service.
+            - generic [ref=e1602] [box=120,6698,1067,22]:
+              - strong [ref=e1603] [box=120,6700,96,17]: "Why you see it:"
+              - text: Avoids real external calls.
+            - generic [ref=e1604] [box=120,6731,1067,22]:
+              - strong [ref=e1605] [box=120,6733,79,17]: "What to ask:"
+              - text: What service was replaced?
+          - article [ref=e1606] [box=101,6782,1103,187]:
+            - heading "Assertion" [level=3] [ref=e1607] [box=120,6799,1067,29]
+            - generic [ref=e1608] [box=120,6832,1067,20]: Tests
+            - generic [ref=e1609] [box=120,6863,1067,22]: Expected truth inside a test.
+            - generic [ref=e1610] [box=120,6897,1067,22]:
+              - strong [ref=e1611] [box=120,6899,96,17]: "Why you see it:"
+              - text: Failures show bad assertions.
+            - generic [ref=e1612] [box=120,6931,1067,22]:
+              - strong [ref=e1613] [box=120,6933,79,17]: "What to ask:"
+              - text: What did it expect?
+          - article [ref=e1614] [box=101,6981,1103,187]:
+            - heading "Skipped test" [level=3] [ref=e1615] [box=120,6998,1067,29]
+            - generic [ref=e1616] [box=120,7031,1067,20]: Tests
+            - generic [ref=e1617] [box=120,7063,1067,22]: Test that did not run.
+            - generic [ref=e1618] [box=120,7096,1067,22]:
+              - strong [ref=e1619] [box=120,7098,96,17]: "Why you see it:"
+              - text: Important paths may be skipped.
+            - generic [ref=e1620] [box=120,7130,1067,22]:
+              - strong [ref=e1621] [box=120,7132,79,17]: "What to ask:"
+              - text: Which tests were skipped and why?
+          - article [ref=e1622] [box=101,7181,1103,187]:
+            - heading "Full suite" [level=3] [ref=e1623] [box=120,7198,1067,29]
+            - generic [ref=e1624] [box=120,7231,1067,20]: Tests
+            - generic [ref=e1625] [box=120,7262,1067,22]: Broad collected test set.
+            - generic [ref=e1626] [box=120,7296,1067,22]:
+              - strong [ref=e1627] [box=120,7298,96,17]: "Why you see it:"
+              - text: Regression confidence.
+            - generic [ref=e1628] [box=120,7330,1067,22]:
+              - strong [ref=e1629] [box=120,7332,79,17]: "What to ask:"
+              - text: Does it include this feature?
+          - article [ref=e1630] [box=101,7380,1103,187]:
+            - heading "Targeted test" [level=3] [ref=e1631] [box=120,7397,1067,29]
+            - generic [ref=e1632] [box=120,7430,1067,20]: Tests
+            - generic [ref=e1633] [box=120,7462,1067,22]: Specific focused test.
+            - generic [ref=e1634] [box=120,7495,1067,22]:
+              - strong [ref=e1635] [box=120,7497,96,17]: "Why you see it:"
+              - text: Fast proof for one path.
+            - generic [ref=e1636] [box=120,7529,1067,22]:
+              - strong [ref=e1637] [box=120,7531,79,17]: "What to ask:"
+              - text: Why is this the right target?
+          - article [ref=e1638] [box=101,7580,1103,187]:
+            - heading "Runtime" [level=3] [ref=e1639] [box=120,7597,1067,29]
+            - generic [ref=e1640] [box=120,7630,1067,20]: App runtime
+            - generic [ref=e1641] [box=120,7661,1067,22]: App while executing.
+            - generic [ref=e1642] [box=120,7695,1067,22]:
+              - strong [ref=e1643] [box=120,7697,96,17]: "Why you see it:"
+              - text: Code must affect runtime to matter.
+            - generic [ref=e1644] [box=120,7729,1067,22]:
+              - strong [ref=e1645] [box=120,7731,79,17]: "What to ask:"
+              - text: Did this run in the actual app?
+          - article [ref=e1646] [box=101,7779,1103,187]:
+            - heading "Launch" [level=3] [ref=e1647] [box=120,7796,1067,29]
+            - generic [ref=e1648] [box=120,7829,1067,20]: App runtime
+            - generic [ref=e1649] [box=120,7861,1067,22]: Starting app/process.
+            - generic [ref=e1650] [box=120,7894,1067,22]:
+              - strong [ref=e1651] [box=120,7896,96,17]: "Why you see it:"
+              - text: Agents start apps/scripts.
+            - generic [ref=e1652] [box=120,7928,1067,22]:
+              - strong [ref=e1653] [box=120,7930,79,17]: "What to ask:"
+              - text: Was the app actually launched?
+          - article [ref=e1654] [box=101,7979,1103,187]:
+            - heading "Localhost" [level=3] [ref=e1655] [box=120,7996,1067,29]
+            - generic [ref=e1656] [box=120,8028,1067,20]: App runtime
+            - generic [ref=e1657] [box=120,8060,1067,22]: Current machine as server.
+            - generic [ref=e1658] [box=120,8094,1067,22]:
+              - strong [ref=e1659] [box=120,8096,96,17]: "Why you see it:"
+              - text: Local apps use localhost URLs.
+            - generic [ref=e1660] [box=120,8127,1067,22]:
+              - strong [ref=e1661] [box=120,8129,79,17]: "What to ask:"
+              - text: Does this prove only local behavior?
+          - article [ref=e1662] [box=101,8178,1103,187]:
+            - heading "Server" [level=3] [ref=e1663] [box=120,8195,1067,29]
+            - generic [ref=e1664] [box=120,8228,1067,20]: App runtime
+            - generic [ref=e1665] [box=120,8259,1067,22]: Process responding to requests.
+            - generic [ref=e1666] [box=120,8293,1067,22]:
+              - strong [ref=e1667] [box=120,8295,96,17]: "Why you see it:"
+              - text: Apps often start servers.
+            - generic [ref=e1668] [box=120,8327,1067,22]:
+              - strong [ref=e1669] [box=120,8329,79,17]: "What to ask:"
+              - text: Which port?
+          - article [ref=e1670] [box=101,8378,1103,187]:
+            - heading "Port" [level=3] [ref=e1671] [box=120,8395,1067,29]
+            - generic [ref=e1672] [box=120,8427,1067,20]: App runtime
+            - generic [ref=e1673] [box=120,8459,1067,22]: Numbered server endpoint.
+            - generic [ref=e1674] [box=120,8493,1067,22]:
+              - strong [ref=e1675] [box=120,8495,96,17]: "Why you see it:"
+              - text: Local apps use ports like 5173/8000.
+            - generic [ref=e1676] [box=120,8526,1067,22]:
+              - strong [ref=e1677] [box=120,8528,79,17]: "What to ask:"
+              - text: Was expected port responding?
+          - article [ref=e1678] [box=101,8577,1103,187]:
+            - heading "Environment variable" [level=3] [ref=e1679] [box=120,8594,1067,29]
+            - generic [ref=e1680] [box=120,8627,1067,20]: App runtime
+            - generic [ref=e1681] [box=120,8658,1067,22]: Named runtime setting.
+            - generic [ref=e1682] [box=120,8692,1067,22]:
+              - strong [ref=e1683] [box=120,8694,96,17]: "Why you see it:"
+              - text: Config/modes/secrets may use it.
+            - generic [ref=e1684] [box=120,8726,1067,22]:
+              - strong [ref=e1685] [box=120,8728,79,17]: "What to ask:"
+              - text: Is it safe to print?
+          - article [ref=e1686] [box=101,8776,1103,187]:
+            - heading "Dependency" [level=3] [ref=e1687] [box=120,8793,1067,29]
+            - generic [ref=e1688] [box=120,8826,1067,20]: App runtime
+            - generic [ref=e1689] [box=120,8858,1067,22]: Required package/tool.
+            - generic [ref=e1690] [box=120,8892,1067,22]:
+              - strong [ref=e1691] [box=120,8894,96,17]: "Why you see it:"
+              - text: Missing dependencies break startup.
+            - generic [ref=e1692] [box=120,8925,1067,22]:
+              - strong [ref=e1693] [box=120,8927,79,17]: "What to ask:"
+              - text: Is this code or environment?
+          - article [ref=e1694] [box=101,8976,1103,187]:
+            - heading "Log" [level=3] [ref=e1695] [box=120,8993,1067,29]
+            - generic [ref=e1696] [box=120,9026,1067,20]: App runtime
+            - generic [ref=e1697] [box=120,9057,1067,22]: Runtime output.
+            - generic [ref=e1698] [box=120,9091,1067,22]:
+              - strong [ref=e1699] [box=120,9093,96,17]: "Why you see it:"
+              - text: Agents diagnose from logs.
+            - generic [ref=e1700] [box=120,9125,1067,22]:
+              - strong [ref=e1701] [box=120,9127,79,17]: "What to ask:"
+              - text: What exact line proves the issue?
+          - article [ref=e1702] [box=101,9175,1103,187]:
+            - heading "Stack trace" [level=3] [ref=e1703] [box=120,9192,1067,29]
+            - generic [ref=e1704] [box=120,9225,1067,20]: App runtime
+            - generic [ref=e1705] [box=120,9257,1067,22]: Error path.
+            - generic [ref=e1706] [box=120,9290,1067,22]:
+              - strong [ref=e1707] [box=120,9292,96,17]: "Why you see it:"
+              - text: Shows where code failed.
+            - generic [ref=e1708] [box=120,9324,1067,22]:
+              - strong [ref=e1709] [box=120,9326,79,17]: "What to ask:"
+              - text: What is first relevant project file?
+          - article [ref=e1710] [box=101,9375,1103,187]:
+            - heading "State" [level=3] [ref=e1711] [box=120,9392,1067,29]
+            - generic [ref=e1712] [box=120,9425,1067,20]: App runtime
+            - generic [ref=e1713] [box=120,9456,1067,22]: Stored app/session/cache data.
+            - generic [ref=e1714] [box=120,9490,1067,22]:
+              - strong [ref=e1715] [box=120,9492,96,17]: "Why you see it:"
+              - text: Affects UI/runtime behavior.
+            - generic [ref=e1716] [box=120,9524,1067,22]:
+              - strong [ref=e1717] [box=120,9526,79,17]: "What to ask:"
+              - text: Is this app, fixture, or local state?
+          - article [ref=e1718] [box=101,9574,1103,187]:
+            - heading "UI surface" [level=3] [ref=e1719] [box=120,9591,1067,29]
+            - generic [ref=e1720] [box=120,9624,1067,20]: App runtime
+            - generic [ref=e1721] [box=120,9656,1067,22]: Visible app area.
+            - generic [ref=e1722] [box=120,9689,1067,22]:
+              - strong [ref=e1723] [box=120,9691,96,17]: "Why you see it:"
+              - text: Operator-facing changes appear there.
+            - generic [ref=e1724] [box=120,9723,1067,22]:
+              - strong [ref=e1725] [box=120,9725,79,17]: "What to ask:"
+              - text: Where can the operator see it?
+          - article [ref=e1726] [box=101,9774,1103,187]:
+            - heading "Workflow path" [level=3] [ref=e1727] [box=120,9791,1067,29]
+            - generic [ref=e1728] [box=120,9824,1067,20]: App runtime
+            - generic [ref=e1729] [box=120,9855,1067,22]: User action sequence.
+            - generic [ref=e1730] [box=120,9889,1067,22]:
+              - strong [ref=e1731] [box=120,9891,96,17]: "Why you see it:"
+              - text: Tests may miss real path.
+            - generic [ref=e1732] [box=120,9922,1067,22]:
+              - strong [ref=e1733] [box=120,9924,79,17]: "What to ask:"
+              - text: Was actual workflow exercised?
+          - article [ref=e1734] [box=101,9973,1103,187]:
+            - heading "Coding agent" [level=3] [ref=e1735] [box=120,9990,1067,29]
+            - generic [ref=e1736] [box=120,10023,1067,20]: Coding agents
+            - generic [ref=e1737] [box=120,10055,1067,22]: Tool that inspects, edits, runs commands, summarizes.
+            - generic [ref=e1738] [box=120,10088,1067,22]:
+              - strong [ref=e1739] [box=120,10090,96,17]: "Why you see it:"
+              - text: Main tool being supervised.
+            - generic [ref=e1740] [box=120,10122,1067,22]:
+              - strong [ref=e1741] [box=120,10124,79,17]: "What to ask:"
+              - text: What actions did it take?
+    - button [ref=e134] [cursor=pointer] [box=1275,14,31,25]:
+      - img [ref=e135] [box=1283,20,14,14]
+    - generic [ref=e140] [box=1573,226,300,673]:
+      - generic [ref=e141] [cursor=pointer] [box=1581,242,276,29]: Coding Agent Supervision 101
+      - generic [ref=e1742] [cursor=pointer] [box=1592,270,265,29]: Reference Desk
+      - generic [ref=e1743] [cursor=pointer] [box=1603,299,254,29]: Glossary
+      - generic [ref=e1744] [cursor=pointer] [box=1603,328,254,29]: Shell
+      - generic [ref=e1745] [cursor=pointer] [box=1603,357,254,29]: Bash
+      - generic [ref=e1746] [cursor=pointer] [box=1603,385,254,29]: zsh
+      - generic [ref=e1747] [cursor=pointer] [box=1603,414,254,29]: PowerShell
+      - generic [ref=e1748] [cursor=pointer] [box=1603,443,254,29]: Command
+      - generic [ref=e1749] [cursor=pointer] [box=1603,472,254,29]: Program
+      - generic [ref=e1750] [cursor=pointer] [box=1603,501,254,29]: Subcommand
+      - generic [ref=e1751] [cursor=pointer] [box=1603,529,254,29]: Flag
+      - generic [ref=e1752] [cursor=pointer] [box=1603,558,254,29]: Argument
+      - generic [ref=e1753] [cursor=pointer] [box=1603,587,254,29]: Working directory
+      - generic [ref=e1754] [cursor=pointer] [box=1603,616,254,29]: stdout
+      - generic [ref=e1755] [cursor=pointer] [box=1603,645,254,29]: stderr
+      - generic [ref=e1756] [cursor=pointer] [box=1603,673,254,29]: Exit code
+      - generic [ref=e1757] [cursor=pointer] [box=1603,702,254,29]: Pipe
+      - generic [ref=e1758] [cursor=pointer] [box=1603,731,254,29]: Redirect
+      - generic [ref=e1759] [cursor=pointer] [box=1603,760,254,29]: File
+      - generic [ref=e1760] [cursor=pointer] [box=1603,789,254,29]: Folder / directory
+      - generic [ref=e1761] [cursor=pointer] [box=1603,817,254,29]: Path
+      - generic [ref=e1762] [cursor=pointer] [box=1603,846,254,29]: Absolute path
+      - generic [ref=e1763] [cursor=pointer] [box=1603,875,254,29]: Relative path
+      - generic [ref=e1764] [cursor=pointer] [box=1603,904,254,29]: Repo root
+      - generic [ref=e1765] [cursor=pointer] [box=1603,933,254,29]: Extension
+      - generic [ref=e1766] [cursor=pointer] [box=1603,961,254,29]: Hidden file
+      - generic [ref=e1767] [cursor=pointer] [box=1603,990,254,29]: .env
+      - generic [ref=e1768] [cursor=pointer] [box=1603,1019,254,29]: .state
+      - generic [ref=e1769] [cursor=pointer] [box=1603,1048,254,29]: Git
+      - generic [ref=e1770] [cursor=pointer] [box=1603,1077,254,29]: GitHub
+      - generic [ref=e1771] [cursor=pointer] [box=1603,1105,254,29]: Repository
+      - generic [ref=e1772] [cursor=pointer] [box=1603,1134,254,29]: Branch
+      - generic [ref=e1773] [cursor=pointer] [box=1603,1163,254,29]: main
+      - generic [ref=e1774] [cursor=pointer] [box=1603,1192,254,29]: Working tree
+      - generic [ref=e1775] [cursor=pointer] [box=1603,1221,254,29]: Staged change
+      - generic [ref=e1776] [cursor=pointer] [box=1603,1249,254,29]: Unstaged change
+      - generic [ref=e1777] [cursor=pointer] [box=1603,1278,254,29]: Untracked file
+      - generic [ref=e1778] [cursor=pointer] [box=1603,1307,254,29]: Commit
+      - generic [ref=e1779] [cursor=pointer] [box=1603,1336,254,29]: Commit hash
+      - generic [ref=e1780] [cursor=pointer] [box=1603,1365,254,29]: Diff
+      - generic [ref=e1781] [cursor=pointer] [box=1603,1393,254,29]: Remote
+      - generic [ref=e1782] [cursor=pointer] [box=1603,1422,254,29]: Push
+      - generic [ref=e1783] [cursor=pointer] [box=1603,1451,254,29]: Pull
+      - generic [ref=e1784] [cursor=pointer] [box=1603,1480,254,29]: src
+      - generic [ref=e1785] [cursor=pointer] [box=1603,1509,254,29]: tests
+      - generic [ref=e1786] [cursor=pointer] [box=1603,1537,254,29]: docs
+      - generic [ref=e1787] [cursor=pointer] [box=1603,1566,254,29]: scripts
+      - generic [ref=e1788] [cursor=pointer] [box=1603,1595,254,29]: config
+      - generic [ref=e1789] [cursor=pointer] [box=1603,1624,254,29]: package.json
+      - generic [ref=e1790] [cursor=pointer] [box=1603,1653,254,29]: pyproject.toml
+      - generic [ref=e1791] [cursor=pointer] [box=1603,1681,254,29]: README.md
+      - generic [ref=e1792] [cursor=pointer] [box=1603,1710,254,29]: .gitignore
+      - generic [ref=e1793] [cursor=pointer] [box=1603,1739,254,29]: Test
+      - generic [ref=e1794] [cursor=pointer] [box=1603,1768,254,29]: Unit test
+      - generic [ref=e1795] [cursor=pointer] [box=1603,1797,254,29]: Integration test
+      - generic [ref=e1796] [cursor=pointer] [box=1603,1825,254,29]: Regression test
+      - generic [ref=e1797] [cursor=pointer] [box=1603,1854,254,29]: Smoke test
+      - generic [ref=e1798] [cursor=pointer] [box=1603,1883,254,29]: Live smoke
+      - generic [ref=e1799] [cursor=pointer] [box=1603,1912,254,29]: Dry run
+      - generic [ref=e1800] [cursor=pointer] [box=1603,1941,254,29]: Fixture
+      - generic [ref=e1801] [cursor=pointer] [box=1603,1969,254,29]: Mock
+      - generic [ref=e1802] [cursor=pointer] [box=1603,1998,254,29]: Assertion
+      - generic [ref=e1803] [cursor=pointer] [box=1603,2027,254,29]: Skipped test
+      - generic [ref=e1804] [cursor=pointer] [box=1603,2056,254,29]: Full suite
+      - generic [ref=e1805] [cursor=pointer] [box=1603,2085,254,29]: Targeted test
+      - generic [ref=e1806] [cursor=pointer] [box=1603,2113,254,29]: Runtime
+      - generic [ref=e1807] [cursor=pointer] [box=1603,2142,254,29]: Launch
+      - generic [ref=e1808] [cursor=pointer] [box=1603,2171,254,29]: Localhost
+      - generic [ref=e1809] [cursor=pointer] [box=1603,2200,254,29]: Server
+      - generic [ref=e1810] [cursor=pointer] [box=1603,2228,254,29]: Port
+      - generic [ref=e1811] [cursor=pointer] [box=1603,2257,254,29]: Environment variable
+      - generic [ref=e1812] [cursor=pointer] [box=1603,2286,254,29]: Dependency
+      - generic [ref=e1813] [cursor=pointer] [box=1603,2315,254,29]: Log
+      - generic [ref=e1814] [cursor=pointer] [box=1603,2344,254,29]: Stack trace
+      - generic [ref=e1815] [cursor=pointer] [box=1603,2372,254,29]: State
+      - generic [ref=e1816] [cursor=pointer] [box=1603,2401,254,29]: UI surface
+      - generic [ref=e1817] [cursor=pointer] [box=1603,2430,254,29]: Workflow path
+      - generic [ref=e1818] [cursor=pointer] [box=1603,2459,254,29]: Coding agent
+  - region "Notifications (F8)" [box=0,0,1320,0]:
+    - list [box=1291,933,29,29]
